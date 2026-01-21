@@ -26,7 +26,7 @@ const Navbar = () => {
             <div className='flex xl:flex-row flex-col items-start xl:items-center gap-2 xl:gap-8 '>
               <div className='flex items-center gap-2'>
                 <span>
-                  <Image src={"/logo.webp"} width={40} height={40} alt='Logo' />
+                  <Image src={"/Logo.png"} width={40} height={40} alt='Logo' />
                 </span>
                 <div className='flex flex-col items-start'>
                   <h2 className='text-2xl text-[#2d5016] font-bold'>Marsos.sa</h2>

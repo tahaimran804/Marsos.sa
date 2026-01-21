@@ -58,7 +58,7 @@ const Footer = () => {
             <div className="flex w-full  md:col-span-5 col-span-12 flex-col gap-4 items-start">
               <div className="flex items-center gap-2">
                 <span>
-                  <Image src="/logo.webp" width={50} height={40} alt="Logo" />
+                  <Image src="/Logo.png" width={50} height={40} alt="Logo" />
                 </span>
                 <div className="flex flex-col items-start">
                   <h2 className="text-xl text-white font-bold">Marsos.sa</h2>
