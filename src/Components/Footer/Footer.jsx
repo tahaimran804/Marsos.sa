@@ -50,7 +50,7 @@ const Footer = () => {
 
 
   return (
-    <section className='w-full bg-[#111827] h-auto'>
+    <section className='w-full bg-[#111827] pt-3 md:pt-6 h-auto'>
       <Container className='py-2'>
         <div className='flex items-start  flex-col gap-4'>
           <div className="py-4 w-full border-b border-gray-200 grid grid-cols-12 items-start gap-6">

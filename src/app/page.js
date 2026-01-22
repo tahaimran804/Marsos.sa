@@ -6,13 +6,13 @@ import FeatureProducts from '@/src/Components/FeatureProducts';
 import RegisterSupplier from '@/src/Components/RegisterSupplier';
 const Home = () => {
   return (
-    <div>
+    <>
       <HeroSection />
       <WhyChooseUs />
       <BrowsebyCategory />
       <FeatureProducts />
       <RegisterSupplier />
-    </div>
+    </>
   );
 };
 

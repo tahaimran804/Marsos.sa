@@ -10,8 +10,8 @@ import { FiBox } from "react-icons/fi";
 import Link from 'next/link';
 const Navbar = () => {
   const NavItems = [
-    { id: 1, name: "Home", link: "/marketplace" },
-    { id: 2, name: "All Products", link: "/marketplace" },
+    { id: 1, name: "Home", link: "/" },
+    { id: 2, name: "All Products", link: "/products" },
     { id: 3, name: "Suppliers Directory", link: "/marketplace" },
     { id: 4, name: "Raw Materials", link: "/marketplace" },
     { id: 5, name: "Machinery", link: "/marketplace" },
