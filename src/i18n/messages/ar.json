@@ -31,6 +31,7 @@
   "footer_company": "الشركة",
   "footer_company1": "الرئيسية",
   "footer_company2": "طلب عرض تجريبي",
+  "footer_company3": "طلب عرض الأسعار",
   "footer_resources": "الموارد",
   "footer_resources1": "المنصة",
   "footer_resources2": "الصناعات",
@@ -57,5 +58,13 @@
   "order_id": "رقم الطلب",
   "order_status": "الحالة",
   "order_total": "الإجمالي",
-  "order_processing": "قيد المعالجة"
+  "order_processing": "قيد المعالجة",
+  "shoping_hedd": "سلة التسوق",
+  "order_summary": "ملخص الطلب",
+  "subtotal": "المجموع الفرعي",
+  "shipping": "الشحن",
+  "free": "مجاني",
+  "total": "الإجمالي",
+  "checkout": "إتمام الشراء",
+  "cart_empty": "  سلة التسوق الخاصة بك فارغة"
 }

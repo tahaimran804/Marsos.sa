@@ -14,7 +14,7 @@ const page = () => {
         {/* Header */}
         <div className="flex items-center w-full justify-between gap-2">
           <h1 className="text-3xl font-bold text-black">
-            {t("buyer_heading")}
+            {t("buyer_hedding")}
           </h1>
           <button className="text-sm font-normal text-gray-500 cursor-pointer">
             {t("profile_set")}

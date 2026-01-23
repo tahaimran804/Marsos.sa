@@ -30,6 +30,7 @@
   "footer_company": "Company",
   "footer_company1": "Home",
   "footer_company2": "Request Demo",
+  "footer_company3": "RFQ",
   "footer_resources": "Resources",
   "footer_resources1": "Platform",
   "footer_resources2": "Industries",
@@ -56,5 +57,13 @@
   "order_id": "ID",
   "order_status": "Status",
   "order_total": "Total",
-  "order_processing": "Processing"
+  "order_processing": "Processing",
+  "shoping_hedd": "Shopping Cart",
+  "order_summary": "Order Summary",
+  "subtotal": "Subtotal",
+  "shipping": "Shipping",
+  "free": "Free",
+  "total": "Total",
+  "checkout": "Proceed to Checkout",
+  "cart_empty": "Your cart is empty."
 }

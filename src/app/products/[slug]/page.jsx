@@ -4,13 +4,14 @@ import Container from '@/src/Components/Container'
 import ProductImageGallery from '@/src/Components/ProductImageGellary';
 import { AllProducts } from '@/src/Data/ProductData';
 import { CiPen } from "react-icons/ci";
-import React, { use } from 'react'
+import React, { use, useContext } from 'react'
 import ProductActions from '@/src/Components/ProductActions';
 import { MdOutlineVerifiedUser } from "react-icons/md";
 import { LuClock4 } from "react-icons/lu";
 import Link from 'next/link';
-
+import { CartContext } from '@/src/Context/CartContext';
 const page = ({ params }) => {
+  const { addItems } = useContext(CartContext)
   const { slug } = use(params);
   const product = AllProducts.find(p => p.slug === slug);
   console.log("URL slug:", slug);
@@ -52,7 +53,7 @@ const page = ({ params }) => {
 
           <div className="flex items-center max-[470px]:items-start max-[470px]:flex-col gap-2 sm:gap-6">
             <h2 className="text-2xl gap-1 flex items-end font-semibold text-[#2D5016]">
-              {product.price}
+              SAR {product.price}
               <span className="text-sm font-normal text-gray-500">/Unit</span>
               <span className="text-sm font-normal text-gray-500">/VAT Included</span>
             </h2>
@@ -99,10 +100,22 @@ const page = ({ params }) => {
             </button>
           )}
 
+
+
           <ProductActions
-            onAddToCart={(qty) => console.log("Add to cart:", qty)}
+            onAddToCart={(qty) => {
+              addItems({
+                id: product.id,
+                image: product.images[0],
+                title: product.title,
+                price: product.price,
+                quantity: qty,
+              });
+              alert("Product added successfully!");
+            }}
             onRequestRFQ={() => console.log("Request RFQ clicked")}
           />
+
 
 
           <div className="px-4 flex flex-row max-[400px]:items-start gap-2 max-[400px]:flex-col items-center justify-between w-full py-2 border border-gray-200">

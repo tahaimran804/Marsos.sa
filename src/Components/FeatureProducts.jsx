@@ -41,7 +41,7 @@ const FeatureProducts = () => {
 
                 <div className="flex items-start justify-between w-full">
                   <h3 className="text-lg font-normal text-[#2D5016]">
-                    {product.price}
+                    SAR {product.price}
                   </h3>
                   <span className="bg-gray-200 px-2 rounded-sm text-black text-xs py-1">
                     {product.specifications.MOQ}

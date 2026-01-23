@@ -3,10 +3,8 @@
 import React, { useState } from "react";
 import { AiOutlinePlus, AiOutlineMinus, AiOutlineShoppingCart } from "react-icons/ai";
 import { BsFileEarmarkText } from "react-icons/bs";
-
 const ProductActions = ({ onAddToCart, onRequestRFQ }) => {
   const [quantity, setQuantity] = useState(1);
-
   const increase = () => setQuantity(prev => prev + 1);
   const decrease = () => setQuantity(prev => (prev > 1 ? prev - 1 : 1));
 

@@ -15,7 +15,6 @@ import { useLanguage } from '@/src/Context/LanguageContext';
 
 const Navbar = () => {
   const { lang, setLang, t } = useLanguage();
-
   const NavItems = [
     { id: 1, name: t("home"), link: "/" },
     { id: 2, name: t("all_products"), link: "/products" },
@@ -83,9 +82,11 @@ const Navbar = () => {
                   </span>
                 </button>
                 <button>
-                  <span className='text-[#000000] max-[380px]:text-sm md:text-lg lg:text-xl'>
-                    <IoCartOutline />
-                  </span>
+                  <Link href={"/cart"}>
+                    <span className='text-[#000000] max-[380px]:text-sm md:text-lg lg:text-xl'>
+                      <IoCartOutline />
+                    </span>
+                  </Link>
                 </button>
                 <button>
                   <span className='text-[#000000] max-[380px]:text-sm md:text-lg lg:text-xl'>

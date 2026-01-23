@@ -31,6 +31,7 @@
   "footer_company": "کمپنی",
   "footer_company1": "ہوم",
   "footer_company2": "ڈیمو درخواست کریں",
+  "footer_company3": "آر ایف کیو",
   "footer_resources": "وسائل",
   "footer_resources1": "پلیٹ فارم",
   "footer_resources2": "صنعتیں",
@@ -57,5 +58,13 @@
   "order_id": "آرڈر آئی ڈی",
   "order_status": "اسٹیٹس",
   "order_total": "کل رقم",
-  "order_processing": "زیرِ عمل"
+  "order_processing": "زیرِ عمل",
+  "shoping_hedd": "خریداری کی ٹوکری",
+  "order_summary": "آرڈر کا خلاصہ",
+  "subtotal": "ذیلی مجموعہ",
+  "shipping": "ڈیلیوری",
+  "free": "مفت",
+  "total": "کل رقم",
+  "checkout": "چیک آؤٹ کریں",
+  "cart_empty": "آپ کی ٹوکری "
 }
