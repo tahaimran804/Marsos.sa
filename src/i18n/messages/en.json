@@ -48,5 +48,13 @@
   "unit_meter": "Meter",
   "quotation_specs_label": "Detailed Specifications",
   "quotation_specs_placeholder": "Enter specifications",
-  "quotation_submit_button": "Submit"
+  "quotation_submit_button": "Submit",
+  "buyer_hedding": "Buyer Dashboard",
+  "profile_set": "Edit Profile",
+  "active_orders": "Active Orders",
+  "recent_orders": "Recent Orders",
+  "order_id": "ID",
+  "order_status": "Status",
+  "order_total": "Total",
+  "order_processing": "Processing"
 }

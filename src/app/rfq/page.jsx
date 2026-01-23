@@ -25,25 +25,21 @@ const Page = () => {
   };
 
   return (
-    // 🔥 Background Container ke bahar
-    <section className="bg-red-500 min-h-screen py-12">
-      <Container>
-        {/* Heading */}
+    <Container>
+      <section className="w-full h-full py-8">
         <div className="flex flex-col items-center text-center gap-1 mb-8">
-          <h1 className="text-2xl md:text-3xl font-bold text-blue-400">
+          <h1 className="text-2xl md:text-3xl font-bold">
             {t("quotation_Heading")}
           </h1>
-          <p className="text-sm text-blue-200">
+          <p className="text-sm text-gray-600">
             {t("quotation_Desc")}
           </p>
         </div>
 
-        {/* Form */}
         <form
           onSubmit={handleSubmit}
-          className="max-w-md mx-auto bg-white shadow-xl border border-gray-200 p-6 rounded-md flex flex-col gap-4"
+          className="w-full md:w-180 mx-auto bg-white shadow-xl border border-gray-200 py-5 rounded-md px-4 flex flex-col gap-4"
         >
-          {/* Product */}
           <div className="flex flex-col gap-1">
             <label className="text-sm font-medium text-gray-700">
               {t("quotation_product_label")} *
@@ -107,17 +103,19 @@ const Page = () => {
             />
           </div>
 
-          {/* Button */}
           <button
             type="submit"
-            className="flex items-center justify-center gap-2 bg-green-700 text-white px-6 py-3 rounded-md font-bold hover:bg-green-800 transition"
+            className="group flex items-center justify-center gap-1 bg-[#2D5016] text-white px-6 py-3 rounded-md hover:bg-[#223d0f] font-bold transition"
           >
-            <CiPaperplane className="text-xl" />
+            <CiPaperplane
+              className="text-xl transition-transform duration-300 group-hover:rotate-300"
+            />
             {t("quotation_submit_button")}
           </button>
+
         </form>
-      </Container>
-    </section>
+      </section>
+    </Container>
   );
 };
 

@@ -30,7 +30,7 @@ const LanguagesSwitch = () => {
     <div className="relative mt-2" ref={dropdownRef}>
       <button
         onClick={() => setOpen(!open)}
-        className="text-black text-xl"
+        className="text-black max-[380px]:text-sm md:text-lg lg:text-xl"
       >
         <GrLanguage />
       </button>

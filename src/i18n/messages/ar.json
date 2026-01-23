@@ -49,5 +49,13 @@
   "unit_meter": "متر",
   "quotation_specs_label": "المواصفات التفصيلية",
   "quotation_specs_placeholder": "أدخل المواصفات",
-  "quotation_submit_button": "إرسال"
+  "quotation_submit_button": "إرسال",
+  "buyer_hedding": "لوحة المشتري",
+  "profile_set": "تحرير الملف الشخصي",
+  "active_orders": "الطلبات النشطة",
+  "recent_orders": "الطلبات الأخيرة",
+  "order_id": "رقم الطلب",
+  "order_status": "الحالة",
+  "order_total": "الإجمالي",
+  "order_processing": "قيد المعالجة"
 }

@@ -49,5 +49,13 @@
   "unit_meter": "میٹر",
   "quotation_specs_label": "تفصیلی وضاحتیں",
   "quotation_specs_placeholder": "وضاحتیں درج کریں",
-  "quotation_submit_button": "جمع کریں"
+  "quotation_submit_button": "جمع کریں",
+  "buyer_hedding": "لوحة المشتري",
+  "profile_set": "پروفائل میں ترمیم کریں۔",
+  "active_orders": "فعال آرڈرز",
+  "recent_orders": "حالیہ آرڈرز",
+  "order_id": "آرڈر آئی ڈی",
+  "order_status": "اسٹیٹس",
+  "order_total": "کل رقم",
+  "order_processing": "زیرِ عمل"
 }
