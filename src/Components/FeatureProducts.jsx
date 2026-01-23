@@ -4,7 +4,7 @@ import Container from '@/src/Components/Container'
 import Link from 'next/link';
 import Image from 'next/image';
 import HeadingAndView from '@/src/Components/HeadingAndView';
-import { AllProducts } from '@/src/app/Data/ProductData';
+import { AllProducts } from '@/src/Data/ProductData';
 
 const FeatureProducts = () => {
   const featuredProducts = AllProducts
@@ -13,7 +13,7 @@ const FeatureProducts = () => {
   return (
     <Container>
       <section className="flex py-6 flex-col gap-4 items-start">
-        <HeadingAndView Heading="Feature Products" url="#" />
+        <HeadingAndView Heading="Feature Products" url="products" />
         <div className="grid max-[550px]:grid-cols-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
           {featuredProducts.map((product) => (
             <Link

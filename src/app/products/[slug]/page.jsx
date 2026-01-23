@@ -2,7 +2,7 @@
 
 import Container from '@/src/Components/Container'
 import ProductImageGallery from '@/src/Components/ProductImageGellary';
-import { AllProducts } from '@/src/app/Data/ProductData';
+import { AllProducts } from '@/src/Data/ProductData';
 import { CiPen } from "react-icons/ci";
 import React, { use } from 'react'
 import ProductActions from '@/src/Components/ProductActions';

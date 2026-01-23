@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/src/Components/Navbar/Navbar';
 import Footer from '@/src/Components/Footer/Footer';
-import IsGridContext from '@/src/app/Context/IsGridContext';
+import { LanguageProvider } from '@/src/Context/LanguageContext';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -25,9 +25,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <LanguageProvider>
           <Navbar />
           {children}
           <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

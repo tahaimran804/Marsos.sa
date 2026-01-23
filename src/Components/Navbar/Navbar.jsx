@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 import Container from '@/src/Components/Container'
 import Image from 'next/image'
@@ -8,14 +10,19 @@ import { GoBell } from "react-icons/go";
 import { IoCartOutline, IoPersonOutline } from "react-icons/io5";
 import { FiBox } from "react-icons/fi";
 import Link from 'next/link';
+import LanguagesSwitch from "@/src/Components/LanguagesSwitch";
+import { useLanguage } from '@/src/Context/LanguageContext';
+
 const Navbar = () => {
+  const { lang, setLang, t } = useLanguage();
+
   const NavItems = [
-    { id: 1, name: "Home", link: "/" },
-    { id: 2, name: "All Products", link: "/products" },
-    { id: 3, name: "Suppliers Directory", link: "/marketplace" },
-    { id: 4, name: "Raw Materials", link: "/marketplace" },
-    { id: 5, name: "Machinery", link: "/marketplace" },
-    { id: 6, name: "Packaging", link: "/marketplace" },
+    { id: 1, name: t("home"), link: "/" },
+    { id: 2, name: t("all_products"), link: "/products" },
+    { id: 3, name: t("suppliers_directory"), link: "/marketplace" },
+    { id: 4, name: t("raw_materials"), link: "/marketplace" },
+    { id: 5, name: t("machinery"), link: "/marketplace" },
+    { id: 6, name: t("packaging"), link: "/marketplace" },
   ]
 
   return (
@@ -29,13 +36,13 @@ const Navbar = () => {
                   <Image src={"/Logo.png"} width={40} height={40} alt='Logo' />
                 </span>
                 <div className='flex flex-col items-start'>
-                  <h2 className='text-2xl text-[#2d5016] font-bold'>Marsos.sa</h2>
-                  <p className='text-xs text-gray-500'>MARKETPLACE</p>
+                  <h2 className='text-2xl text-[#2d5016] font-bold'>{t("company_name")}</h2>
+                  <p className='text-xs text-gray-500'>{t("marketplace")}</p>
                 </div>
               </div>
               <div className='lg:flex hidden items-center gap-2 px-2 w-100 h-9 bg-[#f9fafb] border border-[#e5e7eb]'>
                 <span className='text-xl text-gray-500'><CiSearch /></span>
-                <input type="text" placeholder='Search For Products...' className='w-full text-sm border-none outline-0 h-full' />
+                <input type="text" placeholder={t("search_placeholder")} className='w-full text-sm border-none outline-0 h-full' />
               </div>
             </div>
 
@@ -47,7 +54,7 @@ const Navbar = () => {
     transition-all duration-800 ease-in-out"
                 >
                   <span><MdOutlinePrint /></span>
-                  Additive Manufacturing
+                  {t("additive_manufacturing")}
                 </button>
 
                 <button
@@ -55,20 +62,20 @@ const Navbar = () => {
     hover:bg-[#2d5016] hover:text-white
     transition-all duration-800 ease-in-out"
                 >
-                  Submit RFQ
+                  <Link href={"rfq"}>
+                    {t("submit_rfq")}
+                  </Link>
                 </button>
               </div>
 
               <div className='flex items-center gap-1.5 sm:gap-4'>
+                <LanguagesSwitch />
                 <button>
-                  <span className='text-[#000000] max-[380px]:text-sm md:text-lg lg:text-xl'>
-                    <GrLanguage />
-                  </span>
-                </button>
-                <button>
-                  <span className='text-[#000000] max-[380px]:text-sm md:text-lg lg:text-xl'>
-                    <MdOutlineDashboard />
-                  </span>
+                  <Link href={"buyer-dashboard"}>
+                    <span className='text-[#000000] max-[380px]:text-sm md:text-lg lg:text-xl'>
+                      <MdOutlineDashboard />
+                    </span>
+                  </Link>
                 </button>
                 <button>
                   <span className='text-[#000000] max-[380px]:text-sm md:text-lg lg:text-xl'>
@@ -106,7 +113,6 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-
           </nav>
         </div>
       </Container>

@@ -5,14 +5,13 @@ import ProductAsidebar from '@/src/Components/ProductAsidebar'
 import { BsSortDown, BsSortUp } from "react-icons/bs";
 import ProductCard from '@/src/Components/ProductCard';
 import GridToCol from '@/src/Components/GridToCol';
-import { AllProducts } from '@/src/app/Data/ProductData';
+import { AllProducts } from '@/src/Data/ProductData';
 import { useSearchParams } from 'next/navigation';
 
 const page = () => {
   const [isGrid, setIsGrid] = useState(true)
   const searchParams = useSearchParams();
   const categoryFromUrl = searchParams.get("category");
-
   const [filters, setFilters] = useState({
     categories: [],
     locations: [],
@@ -20,7 +19,6 @@ const page = () => {
     maxPrice: "",
     sort: ""
   })
-
   useEffect(() => {
     if (categoryFromUrl) {
       setFilters(prev => ({

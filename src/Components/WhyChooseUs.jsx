@@ -1,29 +1,34 @@
+"use client"
+
 import React from 'react'
 import { MdOutlineVerifiedUser } from "react-icons/md";
 import { IoWalletOutline } from "react-icons/io5";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import Container from '@/src/Components/Container'
+import { useLanguage } from '@/src/Context/LanguageContext';
 const WhyChooseUs = () => {
+  const { t } = useLanguage();
+
   const WhyChooseUsData = [
     {
       id: 1,
       icon: <MdOutlineVerifiedUser />,
-      title: "Verified Suppliers",
-      description: "Every supplier is vetted and verified for business legitimacy in KSA."
+      title: t("why_verified_suppliers"),
+      description: t("why_verified_suppliers_desc")
     },
     {
       id: 2,
       icon: <IoWalletOutline />,
-      title: "Secure Payments",
-      description: "Escrow-protected transactions ensure safety for both buyers and sellers."
+      title: t("why_secure_payments"),
+      description: t("why_secure_payments_desc")
     },
     {
       id: 3,
       icon: <LiaShippingFastSolid />,
-      title: "Logistics Integration",
-      description: "Seamless shipping solutions integrated directly into your checkout"
+      title: t("why_logistics_integration"),
+      description: t("why_logistics_integration_desc")
     }
-  ]
+  ];
   return (
     <section className='w-full h-auto py-10 md:py-16 px-0 md:px-4 bg-white'>
       <Container>

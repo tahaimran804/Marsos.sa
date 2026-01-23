@@ -2,7 +2,7 @@ import React from 'react'
 import Container from '@/src/Components/Container'
 import Link from 'next/link'
 import HeadingAndView from '@/src/Components/HeadingAndView'
-import { AllProducts } from '@/src/app/Data/ProductData'
+import { AllProducts } from '@/src/Data/ProductData'
 
 const BrowsebyCategory = () => {
   const categories = Object.values(
@@ -22,7 +22,7 @@ const BrowsebyCategory = () => {
   return (
     <Container>
       <section className='flex py-6 flex-col gap-4 items-start'>
-        <HeadingAndView Heading="Browse by Category" url="#" />
+        <HeadingAndView Heading="Browse by Category" url="products" />
 
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full'>
           {categories.map((cat) => (
