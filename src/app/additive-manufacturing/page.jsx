@@ -6,8 +6,9 @@ import { CiPaperplane } from "react-icons/ci";
 import { VscVerified } from "react-icons/vsc";
 import { IoLocationOutline, IoTimeOutline, IoPrintOutline } from "react-icons/io5";
 import { useLanguage } from '@/src/Context/LanguageContext';
-
+import { useRouter } from 'next/navigation';
 const ProductDetailPage = () => {
+  const router = useRouter()
   const { t } = useLanguage();
   const [material, setMaterial] = useState('PLA (Standard)')
   const [finish, setFinish] = useState('Standard')
@@ -83,7 +84,9 @@ const ProductDetailPage = () => {
 
             <div className='flex items-center  gap-2'>
               <button className='px-2 py-2 rounded-sm border border-[#2D5016] text-sm bg-transparent text-[#2D5016]'>{t("saveSupplier")}</button>
-              <button className='px-2 py-2 rounded-sm border border-[#2D5016] text-sm bg-[#2D5016] text-white'>{t("startRFQ")}</button>
+              <button
+                onClick={() => router.push("/rfq")}
+                className='px-2 py-2 rounded-sm border border-[#2D5016] text-sm bg-[#2D5016] text-white'>{t("startRFQ")}</button>
             </div>
           </div>
           <div className='w-full border-t lg:hidden border-gray-200 py-4 h-full flex items-start gap-2 md:items-center justify-start md:justify-between'>

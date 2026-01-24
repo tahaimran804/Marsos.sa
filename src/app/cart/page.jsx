@@ -35,13 +35,13 @@ const CartPage = () => {
                 className="flex items-center border border-gray-200 shadow-lg justify-start w-full gap-2 py-2 px-2 h-40 bg-white rounded-md"
               >
                 <div className="w-32 h-28 bg-gray-200 rounded-sm relative">
-                  <Image src={item.image || "/placeholder.png"} fill alt={item.title} className="object-cover rounded-sm" />
+                  <Image src={item.image || "/placeholder.png"} fill alt={t(item.title)} className="object-cover rounded-sm" />
                 </div>
 
                 <div className="flex sm:flex-row flex-col items-start sm:items-center w-full gap-2 justify-between">
                   <div className="flex flex-col gap-1 items-start">
                     <h1 className="text-lg font-semibold text-black">
-                      {item.title}
+                      {t(item.title)}
                     </h1>
                     <button className="px-4 py-2 bg-gray-200 text-gray-600 rounded-md text-sm">
                       Qty: {item.quantity}
@@ -93,7 +93,6 @@ const CartPage = () => {
               >
                 {t("checkout")}
               </button>
-
             </div>
           </div>
         </section>

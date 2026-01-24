@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { CiPen } from "react-icons/ci";
 import { useLanguage } from '@/src/Context/LanguageContext';
+import { IoPrintOutline } from 'react-icons/io5';
 
 const ProductCard = ({ product, isGrid }) => {
   const { t } = useLanguage()
@@ -26,11 +27,11 @@ const ProductCard = ({ product, isGrid }) => {
         <div className="flex flex-col px-3 w-full py-3 gap-3">
           <div className="flex items-start flex-wrap justify-between w-full">
             <button className='px-3 py-1.5 rounded-full bg-[#F0FDF4] text-[#2D5016] text-xs'>Verified Supplier</button>
-            <p className='text-sm max-[400px]:text-xs text-gray-500'>{product.category}</p>
+            <p className='text-sm max-[400px]:text-xs text-gray-500'>{t(product.category)}</p>
           </div>
           <div>
-            <h2 className="text-lg max-[400px]:text-[16px] font-normal text-black">{product.title}</h2>
-            <p className="text-sm max-[400px]:text-xs text-gray-500">{product.company}</p>
+            <h2 className="text-lg max-[400px]:text-[16px] font-normal text-black">{t(product.title)}</h2>
+            <p className="text-sm max-[400px]:text-xs text-gray-500">{t(product.company)}</p>
           </div>
 
           <div className="flex items-center justify-between w-full">
@@ -42,14 +43,15 @@ const ProductCard = ({ product, isGrid }) => {
             </div>
 
             {product.customize ? (
-              <button
-
-                className="flex items-center gap-1 bg-[#D4B483] hover:bg-[#c3a06e] text-[#2D5016] font-semibold px-4 py-2 text-sm max-[400px]:text-xs">
-                <CiPen className="text-lg" />
-                <Link href={`/products/custom-product`}>
-                  Customize
-                </Link>
-              </button>
+              <>
+                <button
+                  className="flex items-center gap-1 bg-[#D4B483] hover:bg-[#c3a06e] text-[#2D5016] font-semibold px-4 py-2 text-sm max-[400px]:text-xs">
+                  <CiPen className="text-lg" />
+                  <Link href={`/products/custom-product`}>
+                    Customize
+                  </Link>
+                </button>
+              </>
             ) : (
               <button className="bg-[#2D5016] text-white px-4 py-2 text-sm max-[400px]:text-xs">
                 <Link href={`/products/${product.slug}`}>

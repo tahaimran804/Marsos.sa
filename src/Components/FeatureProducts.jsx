@@ -28,17 +28,17 @@ const FeatureProducts = () => {
                 src={product.images[0]}
                 width={300}
                 height={200}
-                alt={product.title}
+                alt={t(product.title)}
                 className="w-full h-60 rounded-t-sm object-cover"
               />
 
               <div className="flex flex-col px-3 w-full py-3 cursor-pointer gap-3 items-start">
                 <div className="flex flex-col items-start">
                   <h2 className="text-lg font-bold text-black">
-                    {product.title}
+                    {t(product.title)}
                   </h2>
                   <p className="text-sm text-gray-500">
-                    {product.company}
+                    {t(product.company)}
                   </p>
                 </div>
 
@@ -47,7 +47,7 @@ const FeatureProducts = () => {
                     SAR {product.price}
                   </h3>
                   <span className="bg-gray-200 px-2 rounded-sm text-black text-xs py-1">
-                    {product.specifications.MOQ}
+                    {t(product.specifications.MOQ)}
                   </span>
                 </div>
               </div>

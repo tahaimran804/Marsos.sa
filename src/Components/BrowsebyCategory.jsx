@@ -43,7 +43,7 @@ const BrowsebyCategory = () => {
 
                 <div className="absolute bottom-2 left-2 z-10">
                   <h1 className="text-xl font-bold text-white">
-                    {cat.name}
+                    {t(cat.name)}
                   </h1>
                   <p className="text-xs text-gray-300">
                     {cat.count}+ Items
