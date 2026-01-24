@@ -1,3 +1,4 @@
+"use client"
 
 import React from 'react'
 import Container from '@/src/Components/Container'
@@ -5,15 +6,17 @@ import Link from 'next/link';
 import Image from 'next/image';
 import HeadingAndView from '@/src/Components/HeadingAndView';
 import { AllProducts } from '@/src/Data/ProductData';
+import { useLanguage } from '@/src/Context/LanguageContext';
 
 const FeatureProducts = () => {
+  const { t } = useLanguage()
   const featuredProducts = AllProducts
     .filter(p => p.featured)
     .slice(0, 4)
   return (
     <Container>
       <section className="flex py-6 flex-col gap-4 items-start">
-        <HeadingAndView Heading="Feature Products" url="products" />
+        <HeadingAndView Heading={t('feature_heading')} url="products" />
         <div className="grid max-[550px]:grid-cols-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
           {featuredProducts.map((product) => (
             <Link

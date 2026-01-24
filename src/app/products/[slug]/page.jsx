@@ -10,6 +10,7 @@ import { MdOutlineVerifiedUser } from "react-icons/md";
 import { LuClock4 } from "react-icons/lu";
 import Link from 'next/link';
 import { CartContext } from '@/src/Context/CartContext';
+
 const page = ({ params }) => {
   const { addItems } = useContext(CartContext)
   const { slug } = use(params);

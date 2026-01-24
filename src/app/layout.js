@@ -4,6 +4,7 @@ import Navbar from '@/src/Components/Navbar/Navbar';
 import Footer from '@/src/Components/Footer/Footer';
 import { LanguageProvider } from '@/src/Context/LanguageContext';
 import { CartProvider } from '@/src/Context/CartContext';
+import DirectionProvider from '@/src/Components/DirectionProvider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -22,15 +23,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
+    <html>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <LanguageProvider>
           <CartProvider>
-            <Navbar />
-            {children}
-            <Footer />
+            <DirectionProvider>
+              <Navbar />
+              {children}
+              <Footer />
+            </DirectionProvider>
           </CartProvider>
         </LanguageProvider>
       </body>

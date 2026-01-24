@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react'
+import React, { useContext } from 'react'
 import Container from '@/src/Components/Container'
 import Image from 'next/image'
 import { CiSearch } from "react-icons/ci";
@@ -12,9 +12,18 @@ import { FiBox } from "react-icons/fi";
 import Link from 'next/link';
 import LanguagesSwitch from "@/src/Components/LanguagesSwitch";
 import { useLanguage } from '@/src/Context/LanguageContext';
+import { CartContext } from '@/src/Context/CartContext';
 
 const Navbar = () => {
   const { lang, setLang, t } = useLanguage();
+  const { cartItems } = useContext(CartContext)
+  console.log("Check The Items", cartItems.title);
+
+  const totalQuantity = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    null
+  )
+
   const NavItems = [
     { id: 1, name: t("home"), link: "/" },
     { id: 2, name: t("all_products"), link: "/products" },
@@ -47,14 +56,16 @@ const Navbar = () => {
 
             <div className='flex items-center gap-3 xl:gap-8 '>
               <div className="lg:flex hidden items-center gap-2">
-                <button
-                  className="px-5 py-2 bg-[#f9fafb] flex items-center gap-2 border border-[#D4B483] text-sm text-[#2d5016]
+                <Link href={"/additive-manufacturing"}>
+                  <button
+                    className="px-5 py-2 bg-[#f9fafb] flex items-center gap-2 border border-[#D4B483] text-sm text-[#2d5016]
     hover:bg-[#D4B483]
     transition-all duration-800 ease-in-out"
-                >
-                  <span><MdOutlinePrint /></span>
-                  {t("additive_manufacturing")}
-                </button>
+                  >
+                    <span><MdOutlinePrint /></span>
+                    {t("additive_manufacturing")}
+                  </button>
+                </Link>
 
                 <button
                   className="border border-[#2d5016] px-4 py-2 text-sm text-[#2d5016]
@@ -83,8 +94,11 @@ const Navbar = () => {
                 </button>
                 <button>
                   <Link href={"/cart"}>
-                    <span className='text-[#000000] max-[380px]:text-sm md:text-lg lg:text-xl'>
+                    <span className='text-[#000000] flex items-start gap-0.5 max-[380px]:text-sm md:text-lg lg:text-xl'>
                       <IoCartOutline />
+                      {totalQuantity > 0 && (
+                        <span className='text-xs font-[#2D5016] pb-2'>{totalQuantity}</span>
+                      )}
                     </span>
                   </Link>
                 </button>

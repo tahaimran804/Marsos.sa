@@ -7,10 +7,12 @@ import ProductCard from '@/src/Components/ProductCard';
 import GridToCol from '@/src/Components/GridToCol';
 import { AllProducts } from '@/src/Data/ProductData';
 import { useSearchParams } from 'next/navigation';
+import { useLanguage } from '@/src/Context/LanguageContext';
 
 const page = () => {
   const [isGrid, setIsGrid] = useState(true)
   const searchParams = useSearchParams();
+  const { t } = useLanguage()
   const categoryFromUrl = searchParams.get("category");
   const [filters, setFilters] = useState({
     categories: [],
@@ -27,9 +29,6 @@ const page = () => {
       }))
     }
   }, [categoryFromUrl])
-
-  const parsePrice = (price) =>
-    Number(price.replace(/[^\d]/g, ""))
   const filteredProducts = useMemo(() => {
     let data = [...AllProducts]
     if (filters.categories.length > 0) {
@@ -44,24 +43,21 @@ const page = () => {
     }
     if (filters.minPrice) {
       data = data.filter(
-        p => parsePrice(p.price) >= Number(filters.minPrice)
+        p => p.price >= Number(filters.minPrice)
       )
     }
     if (filters.maxPrice) {
       data = data.filter(
-        p => parsePrice(p.price) <= Number(filters.maxPrice)
+        p => p.price <= Number(filters.maxPrice)
       )
     }
     if (filters.sort === "low") {
-      data.sort(
-        (a, b) => parsePrice(a.price) - parsePrice(b.price)
-      )
+      data.sort((a, b) => a.price - b.price)
     }
     if (filters.sort === "high") {
-      data.sort(
-        (a, b) => parsePrice(b.price) - parsePrice(a.price)
-      )
+      data.sort((a, b) => b.price - a.price)
     }
+
     return data
   }, [filters])
   const categories = [...new Set(AllProducts.map(p => p.category))]
@@ -80,7 +76,7 @@ const page = () => {
         <section className='col-span-9 max-[800px]:col-span-12 w-full h-full flex flex-col gap-3 items-start'>
           <div className='flex flex-row max-[330px]:flex-col items-start sm:items-center  justify-between w-full'>
             <h1 className='text-lg sm:text-2xl font-semibold flex items-center gap-1'>
-              All Products{" "}
+              {t("all_product")}
               <span className='text-sm sm:text-lg font-normal text-gray-500'>({filteredProducts.length})</span>
             </h1>
 
@@ -90,9 +86,9 @@ const page = () => {
                   setFilters({ ...filters, sort: e.target.value })
                 }
                 className="w-full border border-gray-300 px-3 py-1 text-sm rounded outline-none">
-                <option value="">Sort by: Featured</option>
-                <option value="low">Price: Low to High</option>
-                <option value="high">Price: High to Low</option>
+                <option value="">{t('sort_featured')}</option>
+                <option value="low">{t('sort_low_to_high')}</option>
+                <option value="high">{t('sort_high_to_low')}</option>
               </select>
               <GridToCol isGrid={isGrid} setIsGrid={setIsGrid} />
             </div>
@@ -111,7 +107,7 @@ const page = () => {
             <div className="w-full flex h-40 border border-gray-200 items-center justify-center py-20">
               <div className="flex w-full h-full flex-col gap-4 items-center justify-center">
                 <p className="text-gray-600 text-sm">
-                  No products found for the selected.
+                  {t("no_products")}
                 </p>
 
                 <button
@@ -127,7 +123,7 @@ const page = () => {
                   className="text-sm text-[#2d5016] border border-[#2d5016]
         px-4 py-1.5 hover:bg-[#2d5016] hover:text-white transition"
                 >
-                  Clear Filters
+                  {t("clear_filters")}
                 </button>
               </div>
             </div>

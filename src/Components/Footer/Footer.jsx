@@ -4,6 +4,7 @@ import React from 'react';
 import Container from "@/src/Components/Container";
 import Image from 'next/image';
 import { useLanguage } from '@/src/Context/LanguageContext';
+import Link from 'next/link';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -55,9 +56,9 @@ const Footer = () => {
                 <ul className="flex flex-col gap-1 items-start">
                   {ProductLink.map((item) => (
                     <li key={item.id}>
-                      <a href={item.url} className="text-sm text-gray-500 hover:text-white transition-colors">
+                      <Link href={item.url} className="text-sm text-gray-500 hover:text-white transition-colors">
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -69,9 +70,9 @@ const Footer = () => {
                 <ul className="flex flex-col gap-1 items-start">
                   {CompanyLink.map((item) => (
                     <li key={item.id}>
-                      <a href={item.url} className="text-sm text-gray-500 hover:text-white transition-colors">
+                      <Link href={item.url} className="text-sm text-gray-500 hover:text-white transition-colors">
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -83,9 +84,9 @@ const Footer = () => {
                 <ul className="flex flex-col gap-1 items-start">
                   {ResourcesLink.map((item) => (
                     <li key={item.id}>
-                      <a href={item.url} className="text-sm text-gray-500 hover:text-white transition-colors">
+                      <Link href={item.url} className="text-sm text-gray-500 hover:text-white transition-colors">
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

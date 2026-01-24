@@ -53,7 +53,7 @@ const CartPage = () => {
                       SAR {item.price * item.quantity}
                     </h1>
                     <button
-                      onClick={() => removeFromCart(item.id)}
+                      onClick={() => deleteItems(item.id)}
                       className="px-4 py-2 bg-gray-200 text-red-500 rounded-md text-sm"
                     >
                       <IoTrashOutline />

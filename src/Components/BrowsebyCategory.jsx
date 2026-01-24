@@ -1,10 +1,14 @@
+"use client"
+
 import React from 'react'
 import Container from '@/src/Components/Container'
 import Link from 'next/link'
 import HeadingAndView from '@/src/Components/HeadingAndView'
 import { AllProducts } from '@/src/Data/ProductData'
+import { useLanguage } from '@/src/Context/LanguageContext'
 
 const BrowsebyCategory = () => {
+  const { t } = useLanguage()
   const categories = Object.values(
     AllProducts.reduce((acc, product) => {
       if (!acc[product.category]) {
@@ -22,7 +26,7 @@ const BrowsebyCategory = () => {
   return (
     <Container>
       <section className='flex py-6 flex-col gap-4 items-start'>
-        <HeadingAndView Heading="Browse by Category" url="products" />
+        <HeadingAndView Heading={t("broswer_heading")} url='products' />
 
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full'>
           {categories.map((cat) => (

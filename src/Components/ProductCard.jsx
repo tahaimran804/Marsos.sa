@@ -1,8 +1,12 @@
+"use client"
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { CiPen } from "react-icons/ci";
+import { useLanguage } from '@/src/Context/LanguageContext';
 
 const ProductCard = ({ product, isGrid }) => {
+  const { t } = useLanguage()
   if (isGrid) {
     return (
       <div
@@ -81,13 +85,13 @@ const ProductCard = ({ product, isGrid }) => {
       <div className="flex flex-col justify-between max-[600px]:gap-2 p-4 w-full">
         <div className='flex items-start sm:items-center sm:flex-row flex-col gap-1  justify-between'>
           <div className='flex items-start flex-col gap-3'>
-            <h2 className="text-sm sm:text-lg font-medium">{product.title}</h2>
-            <p className="text-sm max-[400px]:text-xs text-gray-500">{product.company}</p>
+            <h2 className="text-sm sm:text-lg font-medium">{t(product.title)}</h2>
+            <p className="text-sm max-[400px]:text-xs text-gray-500">{t(product.company)}</p>
           </div>
 
           <div className="flex items-start sm:items-end flex-col gap-2 sm:gap-1">
             <button className='px-3 py-1.5 rounded-full bg-[#F0FDF4] text-[#2D5016] text-xs'>Verified Supplier</button>
-            <p className='text-sm max-[400px]:text-xs text-gray-500'>{product.category}</p>
+            <p className='text-sm max-[400px]:text-xs text-gray-500'>{t(product.category)}</p>
           </div>
         </div>
 
