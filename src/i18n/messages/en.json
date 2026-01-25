@@ -162,5 +162,22 @@
   "hpm_model": "HPM-300X",
   "hpm_power": "7 HP",
   "hpm_moq": "1 Unit",
-  "hpm_lead_time": "7-10 Days"
+  "hpm_lead_time": "7-10 Days",
+  "design_hedding": "Upload design to preview on cup",
+  "design_heading": "Design preview (color & logo)",
+  "product_title": "Custom Printed Paper Cups",
+  "product_desc": "Premium quality cups with high-resolution printing.",
+  "cup_size": "Cup Size",
+  "handle_type": "Handle Type",
+  "base_color": "Base Color",
+  "upload_logo": "Click to upload logo",
+  "upload_note": "PNG, JPG (Max 5MB)",
+  "quan": "Quantity",
+  "units": "Units",
+  "total_amount": "Total Amount",
+  "add_to_cart": "Add to Cart",
+  "request_quote": "Request Quote",
+  "Single Wall": "Single Wall",
+  "Double Wall": "Double Wall",
+  "Ripple Wall": "Ripple Wall"
 }

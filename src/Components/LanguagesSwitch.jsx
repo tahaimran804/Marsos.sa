@@ -9,6 +9,7 @@ import { useLanguage } from "@/src/Context/LanguageContext";
 const LanguagesSwitch = () => {
   const [open, setOpen] = useState(false);
   const { lang, setLang, t } = useLanguage();
+
   const dropdownRef = useRef(null);
 
   useEffect(() => {
@@ -36,7 +37,7 @@ const LanguagesSwitch = () => {
       </button>
 
       {open && (
-        <div className="absolute right-0 mt-2 w-52 shadow-md bg-white border border-gray-200 rounded-md  p-2 flex flex-col gap-2 z-50">
+        <div className="absolute right-0 mt-2 w-36 sm:w-52 shadow-md bg-white border border-gray-200 rounded-md  p-2 flex flex-col gap-2 z-50">
           <button
             onClick={() => changeLang("en")}
             className={`text-left hover:bg-gray-100 px-2 py-1 rounded

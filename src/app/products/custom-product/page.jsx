@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { CiPen } from "react-icons/ci";
 import Container from "@/src/Components/Container";
+import { useLanguage } from "@/src/Context/LanguageContext";
 
 const sizes = ["7oz", "8oz", "12oz", "16oz"];
 const handleTypes = ["Single Wall", "Double Wall", "Ripple Wall"];
@@ -9,6 +10,7 @@ const colors = ["#ffffff", "#000000", "#c4a484", "#2D5016", "#e11d48"];
 const quantities = [500, 1000, 5000];
 
 const ProductCustomization = ({ onAddToCart, onRequestRFQ }) => {
+  const { t } = useLanguage();
   const [size, setSize] = useState("12oz");
   const [handle, setHandle] = useState("Single Wall");
   const [color, setColor] = useState("#ffffff");
@@ -40,7 +42,10 @@ const ProductCustomization = ({ onAddToCart, onRequestRFQ }) => {
               />
             )}
           </div>
-          <p className="text-gray-500 text-sm">Upload design to preview on cup</p>
+          <p className="text-gray-500 text-sm">
+            {t("design_heading")}
+
+          </p>
         </div>
 
 
@@ -51,26 +56,19 @@ const ProductCustomization = ({ onAddToCart, onRequestRFQ }) => {
           <div className="col-span-12 lg:col-span-6 w-full flex flex-col gap-6">
             <div>
               <h1 className="text-2xl sm:text-3xl font-semibold mt-2">
-                Custom Printed Paper Cups
+                {t("product_title")}
               </h1>
-              <p className="text-gray-600 mt-2 w-full">
-                Premium quality single or double wall cups with high-resolution offset printing. Perfect for cafes, events, and corporate branding.
+              <p className="text-gray-600 mt-2">
+                {t("product_desc")}
               </p>
             </div>
           </div>
 
           <div>
-            <h3 className="text-sm font-medium mb-2">Cup Size</h3>
+            <h3 className="text-sm font-medium mb-2">{t("cup_size")}</h3>
             <div className="flex gap-2 flex-wrap">
               {sizes.map((s) => (
-                <button
-                  key={s}
-                  onClick={() => setSize(s)}
-                  className={`px-4 py-1.5 text-sm border rounded-sm ${size === s
-                    ? "border-[#2D5016] bg-green-50 text-[#2D5016]"
-                    : "border-gray-300"
-                    }`}
-                >
+                <button key={s} onClick={() => setSize(s)} className={`px-4 py-1.5 text-sm border rounded-sm ${size === s ? "border-[#2D5016] bg-green-50 text-[#2D5016]" : "border-gray-300"}`}>
                   {s}
                 </button>
               ))}
@@ -79,97 +77,57 @@ const ProductCustomization = ({ onAddToCart, onRequestRFQ }) => {
 
           {/* Handle Type */}
           <div>
-            <h3 className="text-sm font-medium mb-2">Handle Type</h3>
+            <h3 className="text-sm font-medium mb-2">{t("handle_type")}</h3>
             <div className="flex gap-2 flex-wrap">
               {handleTypes.map((h) => (
-                <button
-                  key={h}
-                  onClick={() => setHandle(h)}
-                  className={`px-4 py-1.5 text-sm border rounded-sm ${handle === h
-                    ? "border-[#2D5016] bg-green-50 text-[#2D5016]"
-                    : "border-gray-300"
-                    }`}
-                >
-                  {h}
+                <button key={h} onClick={() => setHandle(h)} className={`px-4 py-1.5 text-sm border rounded-sm ${handle === h ? "border-[#2D5016] bg-green-50 text-[#2D5016]" : "border-gray-300"}`}>
+                  {t(h)}
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Base Color */}
           <div>
-            <h3 className="text-sm font-medium mb-2">Base Color</h3>
+            <h3 className="text-sm font-medium mb-2">{t("base_color")}</h3>
             <div className="flex gap-3">
               {colors.map((c) => (
-                <button
-                  key={c}
-                  onClick={() => setColor(c)}
-                  className={`w-6 h-6 rounded-full border-2 ${color === c ? "border-[#2D5016]" : "border-gray-300"
-                    }`}
-                  style={{ backgroundColor: c }}
-                />
+                <button key={c} onClick={() => setColor(c)} className={`w-6 h-6 rounded-full border-2 ${color === c ? "border-[#2D5016]" : "border-gray-300"}`} style={{ backgroundColor: c }} />
               ))}
             </div>
           </div>
 
-          {/* Upload Design */}
-          <div className="border border-dashed border-gray-300 rounded-md p-4 text-center cursor-pointer hover:bg-gray-50 relative">
+          <div className="border border-dashed border-gray-300 rounded-md p-4 text-center relative">
             <CiPen className="mx-auto text-2xl text-gray-500" />
-            <p className="text-sm text-gray-600 mt-1">Click to upload logo</p>
-            <p className="text-xs text-gray-400">PNG, JPG (Max 5MB)</p>
-            <input
-              type="file"
-              accept="image/png, image/jpeg"
-              className="hidden"
-              onChange={handleUpload}
-              id="uploadLogo"
-            />
-            <label
-              htmlFor="uploadLogo"
-              className="absolute inset-0 cursor-pointer"
-            ></label>
+            <p className="text-sm text-gray-600">{t("upload_logo")}</p>
+            <p className="text-xs text-gray-400">{t("upload_note")}</p>
+            <input type="file" className="hidden" id="uploadLogo" onChange={handleUpload} />
+            <label htmlFor="uploadLogo" className="absolute inset-0 cursor-pointer"></label>
           </div>
 
-          {/* Quantity */}
           <div>
-            <h3 className="text-sm font-medium mb-2">Quantity</h3>
-            <div className="flex gap-2 flex-wrap">
+            <h3 className="text-sm font-medium mb-2">{t("quan")}</h3>
+            <div className="flex gap-2">
               {quantities.map((q) => (
-                <button
-                  key={q}
-                  onClick={() => setQty(q)}
-                  className={`px-4 py-1.5 text-sm border rounded-sm ${qty === q
-                    ? "border-[#2D5016] bg-green-50 text-[#2D5016]"
-                    : "border-gray-300"
-                    }`}
-                >
-                  {q}+ Units
+                <button key={q} onClick={() => setQty(q)} className={`px-4 py-1.5 text-sm border rounded-sm ${qty === q ? "border-[#2D5016] bg-green-50 text-[#2D5016]" : "border-gray-300"}`}>
+                  {q}+ {t("units")}
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Total */}
-          <div className="flex items-center justify-between border-t border-gray-200 pt-3">
-            <span className="text-sm text-gray-500">Total Amount</span>
-            <span className="text-lg font-semibold text-[#2D5016]">
+          <div className="flex justify-between border-t pt-3">
+            <span>{t("total_amount")}</span>
+            <span className="font-semibold text-[#2D5016]">
               SAR {(qty * 0.45).toFixed(2)}
             </span>
           </div>
 
-          {/* Buttons */}
           <div className="flex gap-3">
-            <button
-              onClick={() => onAddToCart(qty)}
-              className="flex-1 bg-[#2D5016] text-white py-2 text-sm rounded-sm"
-            >
-              Add to Cart
+            <button onClick={() => onAddToCart(qty)} className="flex-1 bg-[#2D5016] text-white py-2">
+              {t("add_to_cart")}
             </button>
-            <button
-              onClick={onRequestRFQ}
-              className="flex-1 border border-[#2D5016] text-[#2D5016] py-2 text-sm rounded-sm"
-            >
-              Request Quote
+            <button onClick={onRequestRFQ} className="flex-1 border border-[#2D5016] text-[#2D5016] py-2">
+              {t("request_quote")}
             </button>
           </div>
 

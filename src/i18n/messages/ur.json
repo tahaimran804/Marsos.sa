@@ -161,5 +161,21 @@
   "hpm_model": "HPM-300X",
   "hpm_power": "7 ہارس پاور",
   "hpm_moq": "1 یونٹ",
-  "hpm_lead_time": "7-10 دن"
+  "hpm_lead_time": "7-10 دن",
+  "design_heading": "ڈیزائن کا پیش نظارہ (رنگ اور لوگو)",
+  "product_title": "حسبِ ضرورت پرنٹ شدہ پیپر کپ",
+  "product_desc": "اعلیٰ معیار کے کپ جن پر ہائی ریزولوشن پرنٹنگ کی جاتی ہے۔",
+  "cup_size": "کپ کا سائز",
+  "handle_type": "دیوار کی قسم",
+  "base_color": "بنیادی رنگ",
+  "upload_logo": "لوگو اپلوڈ کرنے کے لیے کلک کریں",
+  "upload_note": "PNG، JPG (زیادہ سے زیادہ 5MB)",
+  "quan": "مقدار",
+  "units": "یونٹس",
+  "total_amount": "کل رقم",
+  "add_to_cart": "کارٹ میں شامل کریں",
+  "request_quote": "قیمت معلوم کریں",
+  "Single Wall": "سنگل وال",
+  "Double Wall": "ڈبل وال",
+  "Ripple Wall": "رِپل وال"
 }

@@ -161,5 +161,21 @@
   "hpm_model": "HPM-300X",
   "hpm_power": "7 حصان",
   "hpm_moq": "1 وحدة",
-  "hpm_lead_time": "7-10 أيام"
+  "hpm_lead_time": "7-10 أيام",
+  "design_heading": "معاينة التصميم (اللون والشعار)",
+  "product_title": "أكواب ورقية مطبوعة حسب الطلب",
+  "product_desc": "أكواب عالية الجودة مع طباعة عالية الدقة.",
+  "cup_size": "حجم الكوب",
+  "handle_type": "نوع الجدار",
+  "base_color": "اللون الأساسي",
+  "upload_logo": "انقر لرفع الشعار",
+  "upload_note": "PNG، JPG (الحد الأقصى 5 ميجابايت)",
+  "quan": "الكمية",
+  "units": "وحدات",
+  "total_amount": "المبلغ الإجمالي",
+  "add_to_cart": "أضف إلى السلة",
+  "request_quote": "طلب عرض سعر",
+  "Single Wall": "جدار واحد",
+  "Double Wall": "جدار مزدوج",
+  "Ripple Wall": "جدار مموج"
 }

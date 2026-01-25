@@ -129,9 +129,6 @@ const page = ({ params }) => {
             }}
             onRequestRFQ={() => console.log("Request RFQ clicked")}
           />
-
-
-
           <div className="px-4 flex flex-row max-[400px]:items-start gap-2 max-[400px]:flex-col items-center justify-between w-full py-2 border border-gray-200">
             <div className="flex items-center gap-2">
               <span className="bg-gray-200 text-gray-500 h-14 w-14 rounded-sm flex items-center justify-center">LOGO</span>
@@ -141,9 +138,7 @@ const page = ({ params }) => {
               </div>
             </div>
             <button className="bg-[#2D5016] text-white px-4 py-2 rounded-sm text-sm">View</button>
-
           </div>
-
         </div>
       </section>
 

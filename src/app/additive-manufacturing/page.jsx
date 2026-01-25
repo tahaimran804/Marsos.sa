@@ -13,11 +13,12 @@ const ProductDetailPage = () => {
   const [material, setMaterial] = useState('PLA (Standard)')
   const [finish, setFinish] = useState('Standard')
   const [dimensions, setDimensions] = useState({ L: 115, W: 85, H: 45 })
-  const [color, setColor] = useState('#E5F73B')
+  const [color, setColor] = useState('#e5e7eb')
   const [quantity, setQuantity] = useState(1000)
   const [logoFile, setLogoFile] = useState(null)
   const [modelFile, setModelFile] = useState(null)
   const [showChat, setShowChat] = useState(false)
+  const [boxColor, setBoxColor] = useState()
   const [chatMessages, setChatMessages] = useState([
     { sender: 'system', text: t("wellcome_message"), time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) }
   ])
@@ -67,13 +68,13 @@ const ProductDetailPage = () => {
                 <h1 className='flex text-sm sm:text-xl text-black items-center gap-2'>{t("precision")}
                   <span className='flex rounded-full items-center gap-0.5 px-2 py-1 text-sm text-blue-500 bg-[#DBEAFE]'><VscVerified /> {t("certified")}</span>
                 </h1>
-                <ul className='grid items-start md:grid-cols-3 grid-cols-2 max-[400px]:grid-cols-1 gap-1.5 md:gap-3'>
+                <ul className='flex w-full items-start flex-wrap gap-1.5 md:gap-3'>
                   {[
                     { id: 1, title: t("paintLoc"), icon: <IoLocationOutline /> },
                     { id: 2, title: t("resTime"), icon: <IoTimeOutline /> },
                     { id: 3, title: t("fmd"), icon: <IoPrintOutline /> }
                   ].map((item) => (
-                    <li className="flex items-center gap-1" key={item.id}>
+                    <li className="flex w-auto items-center gap-1" key={item.id}>
                       <span>{item.icon}</span>
                       <p className="text-xs sm:text-sm text-gray-500">{item.title}</p>
                     </li>
@@ -206,15 +207,30 @@ const ProductDetailPage = () => {
               <button className="mt-4 w-full bg-[#2D5016] text-white py-2 rounded-lg">{t("confirmQuote")}</button>
             </div>
           </div>
-          <div className={`lg:col-span-3 col-span-12 w-full h-72 overflow-y-auto no_scrollbar flex flex-col items-start gap-4 border border-gray-200 rounded-lg p-4 shadow-lg bg-white
-          ${showChat ? "hidden lg:flex" : "flex"}
-            `}>
+          <div
+            className={`lg:col-span-3 col-span-12 w-full h-72 overflow-y-auto no_scrollbar flex flex-col items-start gap-4 border border-gray-200 rounded-lg p-4 shadow-lg
+  ${showChat ? "hidden lg:flex" : "flex"}`}
+          >
             <h2 className="font-semibold text-lg">{t("brandingLogo")}</h2>
-            <div className="w-full h-48 border border-gray-200 flex items-center justify-center rounded-lg overflow-hidden bg-gray-50">
-              {logoFile ? <img src={URL.createObjectURL(logoFile)} alt={t("logoPreview")} className="max-h-full" /> : t("logoPreview")}
+
+            <div
+              className="w-full h-48 border p-5 border-gray-200 flex items-center justify-center rounded-lg overflow-hidden"
+              style={{ backgroundColor: color }}
+            >
+              {logoFile ? (
+                <img
+                  src={URL.createObjectURL(logoFile)}
+                  alt={t("logoPreview")}
+                  className="max-h-full object-contain"
+                />
+              ) : (
+                <span className="text-sm text-gray-600">{t("logoPreview")}</span>
+              )}
             </div>
+
             <input type="file" onChange={handleLogoUpload} className="w-full" />
           </div>
+
 
         </div>
       </Container>
