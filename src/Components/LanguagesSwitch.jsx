@@ -1,17 +1,15 @@
 "use client";
-
 import { useState, useRef, useEffect } from "react";
 import { GrLanguage } from "react-icons/gr";
 import en from "@/src/i18n/messages/en.json";
 import ur from "@/src/i18n/messages/ur.json";
 import ar from "@/src/i18n/messages/ar.json";
 import { useLanguage } from "@/src/Context/LanguageContext";
+
 const LanguagesSwitch = () => {
   const [open, setOpen] = useState(false);
   const { lang, setLang, t } = useLanguage();
-
   const dropdownRef = useRef(null);
-
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
