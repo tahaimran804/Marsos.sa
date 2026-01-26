@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { CiPen } from "react-icons/ci";
 import { useLanguage } from '@/src/Context/LanguageContext';
 import { IoPrintOutline } from 'react-icons/io5';
-
 const ProductCard = ({ product, isGrid }) => {
   const { t } = useLanguage()
   if (isGrid) {
@@ -19,7 +18,7 @@ const ProductCard = ({ product, isGrid }) => {
             src={product.images[0]}
             width={300}
             height={200}
-            alt={product.title}
+            alt={t(product.title)}
             className="w-full h-60 rounded-t-md object-cover"
           />
         </Link>
@@ -30,7 +29,7 @@ const ProductCard = ({ product, isGrid }) => {
             <p className='text-sm max-[400px]:text-xs text-gray-500'>{t(product.category)}</p>
           </div>
           <div>
-            <h2 className="text-lg max-[400px]:text-[16px] font-normal text-black">{t(product.title)}</h2>
+            <h2 className="text-lg max-[400px]:text-[16px] font-normal text-black line-clamp-2">{t(product.title)}</h2>
             <p className="text-sm max-[400px]:text-xs text-gray-500">{t(product.company)}</p>
           </div>
 
@@ -38,7 +37,7 @@ const ProductCard = ({ product, isGrid }) => {
             <div>
               <h3 className="text-lg text-[#2D5016]">SAR {product.price}</h3>
               <span className="bg-gray-200 px-2 rounded-sm text-xs py-1">
-                MOQ: {product.specifications.MOQ}
+                MOQ: {t(product.specifications.MOQ)}
               </span>
             </div>
 
@@ -65,7 +64,6 @@ const ProductCard = ({ product, isGrid }) => {
     )
   }
 
-  // ================= LIST CARD =================
   return (
     <div
       key={product.id}
@@ -87,10 +85,9 @@ const ProductCard = ({ product, isGrid }) => {
       <div className="flex flex-col justify-between max-[600px]:gap-2 p-4 w-full">
         <div className='flex items-start sm:items-center sm:flex-row flex-col gap-1  justify-between'>
           <div className='flex items-start flex-col gap-3'>
-            <h2 className="text-sm sm:text-lg font-medium">{t(product.title)}</h2>
+            <h2 className="text-sm sm:text-lg font-medium line-clamp-2">{t(product.title)}</h2>
             <p className="text-sm max-[400px]:text-xs text-gray-500">{t(product.company)}</p>
           </div>
-
           <div className="flex items-start sm:items-end flex-col gap-2 sm:gap-1">
             <button className='px-3 py-1.5 rounded-full bg-[#F0FDF4] text-[#2D5016] text-xs'>Verified Supplier</button>
             <p className='text-sm max-[400px]:text-xs text-gray-500'>{t(product.category)}</p>
@@ -101,7 +98,7 @@ const ProductCard = ({ product, isGrid }) => {
           <div>
             <h3 className="text-[#2D5016] font-semibold">SAR {product.price}</h3>
             <span className="text-xs bg-gray-200 px-2 py-1 rounded">
-              MOQ: {product.specifications.MOQ}
+              MOQ: {t(product.specifications.MOQ)}
             </span>
 
           </div>

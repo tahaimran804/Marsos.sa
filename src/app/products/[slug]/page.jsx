@@ -96,21 +96,21 @@ const page = ({ params }) => {
 
           {product.customize === true && (
             <>
-              <button
-                className="flex w-full items-center rounded-md gap-1 justify-center bg-[#D4B483] hover:bg-[#c3a06e] text-[#2D5016] font-semibold px-4 py-3 text-sm max-[400px]:text-xs">
-                <CiPen className="text-lg" />
-                <Link href={`/products/custom-product`}>
+              <Link href={`/products/custom-product`}>
+                <button
+                  className="flex w-full items-center rounded-md gap-1 justify-center bg-[#D4B483] hover:bg-[#c3a06e] text-[#2D5016] font-semibold px-4 py-3 text-sm max-[400px]:text-xs">
+                  <CiPen className="text-lg" />
                   Customize
-                </Link>
-              </button>
+                </button>
+              </Link>
 
-              <button
-                className="flex items-center justify-center gap-1 bg-[#D4B483] hover:bg-[#c3a06e] text-[#2D5016] font-semibold px-4 py-3 text-sm max-[400px]:text-xs">
-                <IoPrintOutline className="text-lg" />
-                <Link href={`/additive-manufacturing`}>
+              <Link href={`/additive-manufacturing`}>
+                <button
+                  className="flex items-center justify-center gap-1 bg-[#D4B483] hover:bg-[#c3a06e] text-[#2D5016] font-semibold px-4 py-3 text-sm max-[400px]:text-xs">
+                  <IoPrintOutline className="text-lg" />
                   Additive Manufacturing
-                </Link>
-              </button>
+                </button>
+              </Link>
             </>
           )}
 

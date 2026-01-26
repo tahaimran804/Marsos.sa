@@ -2,7 +2,7 @@ export const AllProducts = [
   {
     id: 1,
     category: 'additive_manufacturing',
-    categoryImage: 'Rawmeterial.jpg',
+    categoryImage: 'category1.jpg',
     title: 'profuct_title',
     shortDesc: 'shortDesc',
     company: 'pro_company_name',
@@ -25,7 +25,7 @@ export const AllProducts = [
   {
     id: 2,
     category: 'laser_cut',
-    categoryImage: 'Wood.jpg',
+    categoryImage: 'category2.jpg',
     title: 'laser_cutting_title',
     shortDesc: 'laser_cutting_shortDesc',
     company: 'laser_company',
@@ -50,7 +50,7 @@ export const AllProducts = [
   {
     id: 3,
     category: '3d_title',
-    categoryImage: 'Paper.jpg',
+    categoryImage: 'category3.jpg',
     title: 'industrial_3d_printer_title',
     shortDesc: 'industrial_3d_printer_shortDesc',
     company: 'printworks_company',
@@ -75,7 +75,7 @@ export const AllProducts = [
   {
     id: 4,
     category: 'hydraulic',
-    categoryImage: 'Plastic.jpg',
+    categoryImage: 'category4.jpg',
     title: 'hydraulic_press_title',
     shortDesc: 'hydraulic_press_shortDesc',
     company: 'hydrotech_company',

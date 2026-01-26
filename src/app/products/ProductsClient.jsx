@@ -109,7 +109,6 @@ const page = () => {
                 <p className="text-gray-600 text-sm">
                   {t("no_products")}
                 </p>
-
                 <button
                   onClick={() =>
                     setFilters({
@@ -128,8 +127,6 @@ const page = () => {
               </div>
             </div>
           )}
-
-
         </section>
       </div>
     </Container>

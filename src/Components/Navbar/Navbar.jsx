@@ -13,6 +13,7 @@ import Link from 'next/link';
 import LanguagesSwitch from "@/src/Components/LanguagesSwitch";
 import { useLanguage } from '@/src/Context/LanguageContext';
 import { CartContext } from '@/src/Context/CartContext';
+import { AllProducts } from "@/src/Data/ProductData"
 
 const Navbar = () => {
   const { lang, setLang, t } = useLanguage();
@@ -23,15 +24,33 @@ const Navbar = () => {
     (total, item) => total + item.quantity,
     null
   )
-
+  const categories = Object.values(
+    AllProducts.reduce((acc, product) => {
+      if (!acc[product.category]) {
+        acc[product.category] = {
+          name: product.category,
+          count: 0,
+          imageUrl: product.categoryImage,
+        }
+      }
+      acc[product.category].count++
+      return acc
+    }, {})
+  )
+  const Topcategories = categories.slice(0, 4)
+  const categoryItems = Topcategories.map((item, index) => ({
+    id: 100 + index,
+    name: t(item.name),
+    link: `/products?category=${encodeURIComponent(item.name)}`
+  }));
   const NavItems = [
     { id: 1, name: t("home"), link: "/" },
     { id: 2, name: t("all_products"), link: "/products" },
-    { id: 3, name: t("suppliers_directory"), link: "/marketplace" },
-    { id: 4, name: t("raw_materials"), link: "/marketplace" },
-    { id: 5, name: t("machinery"), link: "/marketplace" },
-    { id: 6, name: t("packaging"), link: "/marketplace" },
+    { id: 3, name: t("suppliers_directory"), link: "/suppliers" },
+    ...categoryItems
   ]
+
+
 
   return (
     <header className='w-full sticky z-50 top-0 border-b border-gray-200 left-0 bg-white h-auto'>
