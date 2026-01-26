@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import HeroSection from '@/src/Components/HeroSection';
 import WhyChooseUs from '@/src/Components/WhyChooseUs';
 import BrowsebyCategory from '@/src/Components/BrowsebyCategory';

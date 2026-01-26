@@ -58,15 +58,17 @@ const Navbar = () => {
         <div className='flex flex-col gap-2 items-start'>
           <div className='flex py-4 border-b border-gray-200 items-center lg:items-start xl:items-center justify-between gap-1 w-full'>
             <div className='flex xl:flex-row flex-col items-start xl:items-center gap-2 xl:gap-8 '>
-              <div className='flex items-center gap-2'>
-                <span>
-                  <Image src={"/Logo.png"} width={40} height={40} alt='Logo' />
-                </span>
-                <div className='flex flex-col items-start'>
-                  <h2 className='text-2xl text-[#2d5016] font-bold'>{t("company_name")}</h2>
-                  <p className='text-xs text-gray-500'>{t("marketplace")}</p>
+              <Link href={"/"}>
+                <div className='flex items-center gap-2'>
+                  <span>
+                    <Image src={"/Logo.png"} width={40} height={40} alt='Logo' />
+                  </span>
+                  <div className='flex flex-col items-start'>
+                    <h2 className='text-2xl text-[#2d5016] font-bold'>{t("company_name")}</h2>
+                    <p className='text-xs text-gray-500'>{t("marketplace")}</p>
+                  </div>
                 </div>
-              </div>
+              </Link>
               <div className='lg:flex hidden items-center gap-2 px-2 w-100 h-9 bg-[#f9fafb] border border-[#e5e7eb]'>
                 <span className='text-xl text-gray-500'><CiSearch /></span>
                 <input type="text" placeholder={t("search_placeholder")} className='w-full text-sm border-none outline-0 h-full' />
@@ -77,7 +79,7 @@ const Navbar = () => {
               <div className="lg:flex hidden items-center gap-2">
                 <Link href={"/additive-manufacturing"}>
                   <button
-                    className="px-5 py-2 bg-[#f9fafb] flex items-center gap-2 border border-[#D4B483] text-sm text-[#2d5016]
+                    className="px-5 py-2 cursor-pointer bg-[#f9fafb] flex items-center gap-2 border border-[#D4B483] text-sm text-[#2d5016]
     hover:bg-[#D4B483]
     transition-all duration-800 ease-in-out"
                   >
@@ -86,15 +88,15 @@ const Navbar = () => {
                   </button>
                 </Link>
 
-                <button
-                  className="border border-[#2d5016] px-4 py-2 text-sm text-[#2d5016]
+                <Link href={"rfq"}>
+                  <button
+                    className="border cursor-pointer border-[#2d5016] px-4 py-2 text-sm text-[#2d5016]
     hover:bg-[#2d5016] hover:text-white
     transition-all duration-800 ease-in-out"
-                >
-                  <Link href={"rfq"}>
+                  >
                     {t("submit_rfq")}
-                  </Link>
-                </button>
+                  </button>
+                </Link>
               </div>
 
               <div className='flex items-center gap-1.5 sm:gap-4'>
