@@ -17,9 +17,9 @@ const Footer = () => {
   ];
 
   const CompanyLink = [
-    { id: 1, name: t("footer_company1"), url: "/" },
+    { id: 1, name: t("footer_company1"), url: "/marketplace" },
     { id: 2, name: t("footer_company2"), url: "#" },
-    { id: 3, name: t("footer_company3"), url: "/rfq" },
+    { id: 3, name: t("footer_company3"), url: "/marketplace/rfq" },
   ];
 
   const ResourcesLink = [

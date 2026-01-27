@@ -177,5 +177,45 @@
   "request_quote": "طلب عرض سعر",
   "Single Wall": "جدار واحد",
   "Double Wall": "جدار مزدوج",
-  "Ripple Wall": "جدار مموج"
+  "Ripple Wall": "جدار مموج",
+
+  "platform": "المنصة",
+  "how_it_works": "كيف تعمل",
+  "industries": "القطاعات",
+  "market": "السوق",
+  "demo": "طلب عرض توضيحي",
+  "landing_hend": "تحكم كامل في التصنيع مع",
+  "landing_hend_span": "Marsos.sa",
+  "landing_desc": "وحّد أعمالك بالكامل على منصة واحدة. من تخطيط متطلبات المواد والإنتاج إلى المالية والموارد البشرية والمبيعات—قم بتبسيط كل جانب من جوانب مؤسستك الصناعية.",
+  "schedule": "جدولة عرض توضيحي",
+  "overview": "شاهد النظرة العامة",
+  "item_hedding": "الكل في واحد",
+  "item_hedding1": "98٪",
+  "item_hedding2": "المملكة العربية السعودية",
+  "item_desc": "تخطيط المواد + تخطيط الموارد + الموارد البشرية",
+  "item_desc1": "زيادة الكفاءة",
+  "item_des2": "دعم محلي",
+  "analytics": "تحليلات فورية",
+  "production": "المالية والإنتاج",
+
+  "complete_ecosystem_heading": "نظام متكامل لإدارة أعمالك",
+  "complete_ecosystem_desc": "تجمع Marsos.sa بين التصنيع والمالية والموارد البشرية والمبيعات في منصة موحدة",
+
+  "advanced_mrp": "إدارة متقدمة للمواد (MRP)",
+  "advanced_mrp_desc": "تتبع المواد والمكونات والمنتجات النهائية في الوقت الفعلي.",
+
+  "financial_suite": "الحزمة المالية",
+  "financial_suite_desc": "نظام متكامل للمحاسبة والميزانية وإدارة الضرائب.",
+
+  "sales_invoicing": "المبيعات والفوترة",
+  "sales_invoicing_desc": "إنشاء عروض أسعار احترافية وإدارة طلبات العملاء.",
+
+  "hr_payroll": "الموارد البشرية والرواتب",
+  "hr_payroll_desc": "إدارة شاملة للموظفين ونظام رواتب آلي.",
+
+  "business_intelligence": "ذكاء الأعمال",
+  "business_intelligence_desc": "ربط الفرق عبر لوحات تحكم مشتركة.",
+
+  "process_automation": "أتمتة العمليات",
+  "process_automation_desc": "أتمتة سير العمل من عرض السعر إلى تحصيل المدفوعات."
 }

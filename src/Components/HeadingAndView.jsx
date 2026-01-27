@@ -12,7 +12,7 @@ const HeadingAndView = (props) => {
     <div className="flex items-center justify-between w-full">
       <h1 className="text-2xl font-bold text-black">{Heading}</h1>
       <button
-        onClick={() => router.push(`/${url}`)}
+        onClick={() => router.push(`/marketplace/${url}`)}
         className="text-sm text-gray-500 flex items-center cursor-pointer hover:underline transition gap-1">
         {t("view")} <IoArrowForwardOutline />
       </button>

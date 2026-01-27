@@ -13,7 +13,7 @@ const ProductCard = ({ product, isGrid }) => {
         key={product.id}
         className="flex flex-col border rounded-md border-gray-200 bg-white hover:shadow-2xl duration-500 gap-2 items-start"
       >
-        <Link href={`/products/${product.slug}`} className="w-full">
+        <Link href={`/marketplace/products/${product.slug}`} className="w-full">
           <Image
             src={product.images[0]}
             width={300}
@@ -46,14 +46,14 @@ const ProductCard = ({ product, isGrid }) => {
                 <button
                   className="flex items-center gap-1 bg-[#D4B483] hover:bg-[#c3a06e] text-[#2D5016] font-semibold px-4 py-2 text-sm max-[400px]:text-xs">
                   <CiPen className="text-lg" />
-                  <Link href={`/products/custom-product`}>
+                  <Link href={`/marketplace/products/custom-product`}>
                     Customize
                   </Link>
                 </button>
               </>
             ) : (
               <button className="bg-[#2D5016] text-white px-4 py-2 text-sm max-[400px]:text-xs">
-                <Link href={`/products/${product.slug}`}>
+                <Link href={`/marketplace/products/${product.slug}`}>
                   View
                 </Link>
               </button>
@@ -71,7 +71,7 @@ const ProductCard = ({ product, isGrid }) => {
       className="flex border border-gray-200 rounded-md bg-white hover:shadow-xl duration-300 w-full"
     >
 
-      <Link href={`/products/${product.slug}`}>
+      <Link href={`/marketplace/products/${product.slug}`}>
 
         <Image
           src={product.images[0]}
@@ -107,13 +107,13 @@ const ProductCard = ({ product, isGrid }) => {
 
               className="flex items-center gap-1 bg-[#D4B483] hover:bg-[#c3a06e] text-[#2D5016] font-semibold px-4 py-2 text-sm max-[400px]:text-xs">
               <CiPen className="text-lg" />
-              <Link href={`/products/custom-product`}>
+              <Link href={`/marketplace/products/custom-product`}>
                 Customize
               </Link>
             </button>
           ) : (
             <button className="bg-[#2D5016] text-white px-4 py-2 text-sm max-[400px]:text-xs">
-              <Link href={`/products/${product.slug}`}>
+              <Link href={`/marketplace/products/${product.slug}`}>
                 View
               </Link>
             </button>

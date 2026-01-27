@@ -1,19 +1,16 @@
-import React, { Suspense } from 'react';
-import HeroSection from '@/src/Components/HeroSection';
-import WhyChooseUs from '@/src/Components/WhyChooseUs';
-import BrowsebyCategory from '@/src/Components/BrowsebyCategory';
-import FeatureProducts from '@/src/Components/FeatureProducts';
-import RegisterSupplier from '@/src/Components/RegisterSupplier';
-const Home = () => {
+import React from 'react';
+import MainNavbar from '@/src/Components/MainNavbar';
+import LandingLayoutHeroSection from '@/src/Components/LandingLayoutHeroSection';
+import Complete_Ecosystem from '@/src/Components/Complete_Ecosystem';
+
+const page = () => {
   return (
     <>
-      <HeroSection />
-      <WhyChooseUs />
-      <BrowsebyCategory />
-      <FeatureProducts />
-      <RegisterSupplier />
+      <MainNavbar />
+      <LandingLayoutHeroSection />
+      <Complete_Ecosystem />
     </>
   );
 };
 
-export default Home;
+export default page;

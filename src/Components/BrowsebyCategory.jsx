@@ -32,7 +32,7 @@ const BrowsebyCategory = () => {
           {categories.map((cat) => (
             <Link
               key={cat.name}
-              href={`/products?category=${encodeURIComponent(cat.name)}`}
+              href={`/marketplace/products?category=${encodeURIComponent(cat.name)}`}
             >
               <div className="w-full h-64 md:h-72 lg:h-90 cursor-pointer relative overflow-hidden rounded-md group">
                 <div

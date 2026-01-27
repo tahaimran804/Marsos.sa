@@ -37,7 +37,7 @@ const HeroSection = () => {
               </button>
             </div>
 
-            <Link href="/products/custom-product">
+            <Link href="/marketplace/products/custom-product">
               <button className='flex gap-1 items-center justify-center ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-8 md:h-11 bg-[#D4B483] hover:bg-[#c3a06e] text-[#2D5016] font-bold border-2 border-white/20 shadow-lg px-6 md:px-8 py-4 md:py-6 text-sm md:text-lg transition-transform hover:scale-105'>
                 <span className='text-xl md:text-2xl'><CiPen /></span>
                 {t("customized_products")}

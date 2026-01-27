@@ -34,7 +34,7 @@ const ProductActions = ({ onAddToCart, onRequestRFQ }) => {
         <AiOutlineShoppingCart className="text-xl" />
         Add to Cart
       </button>
-      <Link href={"/rfq"}>
+      <Link href={"/marketplace/rfq"}>
         <button
           onClick={onRequestRFQ}
           className="md:col-span-3 col-span-6 max-[400px]:col-span-12 flex items-center whitespace-nowrap justify-center gap-2 border border-[#2D5016] text-[#2D5016] px-6 py-3 rounded-md hover:bg-[#2D5016] hover:text-white transition"

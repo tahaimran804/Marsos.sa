@@ -20,7 +20,7 @@ const FeatureProducts = () => {
         <div className="grid max-[550px]:grid-cols-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
           {featuredProducts.map((product) => (
             <Link
-              href={`/products/${product.slug}`}
+              href={`/marketplace/products/${product.slug}`}
               key={product.id}
               className="flex flex-col border rounded-sm border-gray-200 bg-white hover:shadow-2xl duration-500 gap-2 items-start"
             >

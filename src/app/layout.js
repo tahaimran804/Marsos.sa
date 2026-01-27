@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import Navbar from '@/src/Components/Navbar/Navbar';
+import ShowNavbarinMarkplace from '@/src/Components/ShowNavbarinMarkplace';
 import Footer from '@/src/Components/Footer/Footer';
 import { LanguageProvider } from '@/src/Context/LanguageContext';
 import { CartProvider } from '@/src/Context/CartContext';
@@ -17,8 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Marsos.sa | Saudi Arabia B2B Export & Supplier Platform",
-  description:"Marsos.sa is a Saudi-based B2B export platform connecting manufacturers, suppliers, and buyers worldwide. Discover trusted products and grow your business globally.",
+  title: 'Marsos.sa | Saudi Arabia B2B Export & Supplier Platform',
+  description:
+    'Marsos.sa is a Saudi-based B2B export platform connecting manufacturers, suppliers, and buyers worldwide. Discover trusted products and grow your business globally.',
 };
 
 export default function RootLayout({ children }) {
@@ -30,7 +31,7 @@ export default function RootLayout({ children }) {
         <LanguageProvider>
           <CartProvider>
             <DirectionProvider>
-              <Navbar />
+              <ShowNavbarinMarkplace />
               {children}
               <Footer />
             </DirectionProvider>

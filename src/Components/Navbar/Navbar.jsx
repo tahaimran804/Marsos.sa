@@ -18,8 +18,6 @@ import { AllProducts } from "@/src/Data/ProductData"
 const Navbar = () => {
   const { lang, setLang, t } = useLanguage();
   const { cartItems } = useContext(CartContext)
-  console.log("Check The Items", cartItems.title);
-
   const totalQuantity = cartItems.reduce(
     (total, item) => total + item.quantity,
     null
@@ -41,12 +39,12 @@ const Navbar = () => {
   const categoryItems = Topcategories.map((item, index) => ({
     id: 100 + index,
     name: t(item.name),
-    link: `/products?category=${encodeURIComponent(item.name)}`
+    link: `/marketplace/products?category=${encodeURIComponent(item.name)}`
   }));
   const NavItems = [
-    { id: 1, name: t("home"), link: "/" },
-    { id: 2, name: t("all_products"), link: "/products" },
-    { id: 3, name: t("suppliers_directory"), link: "/suppliers" },
+    { id: 1, name: t("home"), link: "/marketplace" },
+    { id: 2, name: t("all_products"), link: "/marketplace/products" },
+    { id: 3, name: t("suppliers_directory"), link: "/marketplace/suppliers" },
     ...categoryItems
   ]
 
@@ -58,7 +56,7 @@ const Navbar = () => {
         <div className='flex flex-col gap-2 items-start'>
           <div className='flex py-4 border-b border-gray-200 items-center lg:items-start xl:items-center justify-between gap-1 w-full'>
             <div className='flex xl:flex-row flex-col items-start xl:items-center gap-2 xl:gap-8 '>
-              <Link href={"/"}>
+              <Link href={"/marketplace"}>
                 <div className='flex items-center gap-2'>
                   <span>
                     <Image src={"/Logo.png"} width={40} height={40} alt='Logo' />
@@ -77,7 +75,7 @@ const Navbar = () => {
 
             <div className='flex items-center gap-3 xl:gap-8 '>
               <div className="lg:flex hidden items-center gap-2">
-                <Link href={"/additive-manufacturing"}>
+                <Link href={"/marketplace/additive-manufacturing"}>
                   <button
                     className="px-5 py-2 cursor-pointer bg-[#f9fafb] flex items-center gap-2 border border-[#D4B483] text-sm text-[#2d5016]
     hover:bg-[#D4B483]
@@ -88,7 +86,7 @@ const Navbar = () => {
                   </button>
                 </Link>
 
-                <Link href={"rfq"}>
+                <Link href={"/marketplace/rfq"}>
                   <button
                     className="border cursor-pointer border-[#2d5016] px-4 py-2 text-sm text-[#2d5016]
     hover:bg-[#2d5016] hover:text-white
@@ -114,7 +112,7 @@ const Navbar = () => {
                   </span>
                 </button>
                 <button>
-                  <Link href={"/cart"}>
+                  <Link href={"/marketplace/cart"}>
                     <span className='text-[#000000] flex items-start gap-0.5 max-[380px]:text-sm md:text-lg lg:text-xl'>
                       <IoCartOutline />
                       {totalQuantity > 0 && (

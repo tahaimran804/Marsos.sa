@@ -178,5 +178,45 @@
   "request_quote": "Request Quote",
   "Single Wall": "Single Wall",
   "Double Wall": "Double Wall",
-  "Ripple Wall": "Ripple Wall"
+  "Ripple Wall": "Ripple Wall",
+
+  "platform": "Platform",
+  "how_it_works": "How It Works",
+  "industries": "Industries",
+  "market": "Marketplace",
+  "demo": "Request Demo",
+  "landing_hend": "Total Manufacturing Control with",
+  "landing_hend_span": "Marsos.sa",
+  "landing_desc": "Unify your entire business on one platform. From MRP and Production to Finance, HR, and Sales—streamline every aspect of your manufacturing enterprise.",
+  "schedule": "Schedule a Demo",
+  "overview": "Watch Overview",
+  "item_hedding": "All-in-One",
+  "item_hedding1": "98%",
+  "item_hedding2": "KSA",
+  "item_desc": "MRP + ERP + HR",
+  "item_desc1": "Efficiency Gain",
+  "item_des2": "Local Support",
+  "analytics": "Real-Time Analytics",
+  "production": "Finance & Production",
+
+  "complete_ecosystem_heading": "A Complete Ecosystem for Your Business",
+  "complete_ecosystem_desc": "Marsos.sa brings together Manufacturing, Finance, HR, and Sales into one unified platform",
+
+  "advanced_mrp": "Advanced MRP",
+  "advanced_mrp_desc": "Track materials, components, and finished goods in real-time.",
+
+  "financial_suite": "Financial Suite",
+  "financial_suite_desc": "Integrated accounting, budgeting, and tax management.",
+
+  "sales_invoicing": "Sales & Invoicing",
+  "sales_invoicing_desc": "Create professional quotations and manage customer orders.",
+
+  "hr_payroll": "HR & Payroll",
+  "hr_payroll_desc": "Complete employee management and automated payroll.",
+
+  "business_intelligence": "Business Intelligence",
+  "business_intelligence_desc": "Connect teams with shared dashboards.",
+
+  "process_automation": "Process Automation",
+  "process_automation_desc": "Automate workflows from quotation to cash collection."
 }
