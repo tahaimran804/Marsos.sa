@@ -21,20 +21,20 @@ const MainNavbar = () => {
   const { lang, setLang, t } = useLanguage();
   const [openNavbar, setOpenNavbar] = useState(false)
   const NavItems = [
-    { id: 1, name: t("home"), link: "/" },
-    { id: 2, name: t("platform"), link: "#" },
-    { id: 3, name: t("how_it_works"), link: "#" },
-    { id: 4, name: t("industries"), link: "#" },
+    { id: 1, name: t("home"), link: "#home" },
+    { id: 2, name: t("platform"), link: "#platform" },
+    { id: 3, name: t("how_it_works"), link: "#how-it-works" },
+    { id: 4, name: t("industries"), link: "#industries" },
   ]
   return (
     <>
 
-      <header className='w-full sticky z-50 top-0 border-b border-gray-200 left-0 bg-white h-auto'>
+      <header id='home' className='w-full sticky z-50 top-0 border-b border-gray-200 left-0 bg-white h-auto'>
         <Container className='py-2'>
           <div className='flex flex-col gap-2 items-start'>
             <div className='flex py-4 items-center lg:items-start xl:items-center justify-between gap-1 w-full'>
               <div className='flex xl:flex-row flex-col items-start xl:items-center gap-2 xl:gap-8 '>
-                <Link href={"/marketplace"}>
+                <Link href={"/"}>
                   <div className='flex items-center gap-2'>
                     <span>
                       <Image src={"/Logo.png"} width={40} height={40} alt='Logo' />
@@ -51,9 +51,9 @@ const MainNavbar = () => {
                   <ul className='flex w-full items-center gap-4'>
                     {NavItems.map((item) => (
                       <li key={item.id} className='whitespace-nowrap'>
-                        <Link href={item.link} className='text-[16px] text-black'>
+                        <a href={item.link} className='text-[16px] text-black'>
                           {item.name}
-                        </Link>
+                        </a>
                       </li>
                     ))}
                   </ul>
@@ -66,7 +66,9 @@ const MainNavbar = () => {
                     </Link>
                     <LanguagesSwitch />
                     <button onClick={() => setOpenNavbar(true)} className='text-xl text-black flex lg:hidden'><FiMenu /></button>
-                    <button className='text-sm lg:flex hidden text-white bg-[#2d5016] px-4 py-2'>{t("demo")}</button>
+                    <a href="#demo">
+                      <button className='text-sm lg:flex hidden text-white bg-[#2d5016] px-4 py-2'>{t("demo")}</button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -78,7 +80,7 @@ const MainNavbar = () => {
 
       <div
         className={`
-    flex flex-col gap-2 py-6 px-2 w-80 h-screen fixed top-0 right-0 z-50 
+    flex flex-col gap-2 py-6 px-2 max-[400px]:w-full w-80 h-screen fixed top-0 right-0 z-50 
     bg-white shadow-lg border-l border-gray-200
     transform transition-transform duration-500 ease-in-out
     ${openNavbar ? "translate-x-0" : "translate-x-full"}

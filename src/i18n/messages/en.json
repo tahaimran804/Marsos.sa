@@ -211,12 +211,93 @@
   "sales_invoicing": "Sales & Invoicing",
   "sales_invoicing_desc": "Create professional quotations and manage customer orders.",
 
-  "hr_payroll": "HR & Payroll",
   "hr_payroll_desc": "Complete employee management and automated payroll.",
 
   "business_intelligence": "Business Intelligence",
   "business_intelligence_desc": "Connect teams with shared dashboards.",
 
   "process_automation": "Process Automation",
-  "process_automation_desc": "Automate workflows from quotation to cash collection."
+  "process_automation_desc": "Automate workflows from quotation to cash collection.",
+  "bm_heading": "A Platform Built for",
+  "bm_heading_span": "Total Business Management",
+  "bm_desc": "Marsos.sa provides end-to-end visibility and control. From the shop floor to the finance department, our platform integrates seamlessly with your operations.",
+
+  "manufacturing_mrp": "Manufacturing & MRP",
+  "mm_1": "Advanced demand forecasting",
+  "mm_2": "Multi-location inventory",
+  "mm_3": "Resource allocation",
+
+  "finance_accounting": "Finance & Accounting",
+  "fa_1": "General Ledger & Budgeting",
+  "fa_2": "Tax Management & Reporting",
+  "fa_3": "Expense Tracking",
+
+  "hr_payroll": "HR & Payroll",
+  "hr_1": "Employee Database & Files",
+  "hr_2": "Automated Payroll Processing",
+  "hr_3": "Attendance & Leave Management",
+
+  "sales_distribution": "Sales & Distribution",
+  "sd_1": "Quotation Management",
+  "sd_2": "Invoice Generation & Tracking",
+  "sd_3": "Customer & Product Catalog",
+
+  "finance": "Finance",
+  "hr": "HR",
+  "invoice": "Invoice",
+  "unified_operations": "Unified Operations",
+  "wf_heading": "Unified Workflow Simplified",
+  "wf_desc": "From the first customer interaction to final financial reporting, Marsos.sa covers every step",
+
+  "wf_step_1_title": "Quote & Onboard",
+  "wf_step_1_desc": "Manage customers and product catalogs.",
+
+  "wf_step_2_title": "Plan & Produce",
+  "wf_step_2_desc": "Automatically schedule production.",
+
+  "wf_step_3_title": "Manage & Bill",
+  "wf_step_3_desc": "Track employee attendance and payroll.",
+
+  "wf_step_4_title": "Analyze & Grow",
+  "wf_step_4_desc": "Gain insights from integrated reports.",
+
+  "IndustrySpecific": "Industry-Specific",
+  "soluHov": "Solutions",
+  "IndustryDesc": "Tailored features and workflows designed for your specific manufacturing needs",
+
+  "PaperCupsTitle": "Paper Cups Manufacturing",
+  "PaperCupsDesc": "Specialized solutions for paper cup production including raw material tracking.",
+  "PaperCupPoint1": "Raw material optimization",
+  "PaperCupPoint2": "Multi-size product management",
+  "PaperCupPoint3": "High-speed production scheduling",
+  "PaperCupPoint4": "Quality control",
+
+  "FurnitureTitle": "Furniture Manufacturing",
+  "FurnitureDesc": "Comprehensive tools for furniture makers covering custom orders.",
+  "FurniturePoint1": "Custom order management",
+  "FurniturePoint2": "Complex bill of materials",
+  "FurniturePoint3": "Wood and material inventory",
+  "FurniturePoint4": "Multi-stage production",
+
+  "requestDemoTitle": "Ready to Transform Your Business?",
+  "requestDemoSubtitle": "Schedule a personalized demo and discover how Marsos.sa can optimize your operations",
+  "formFullName": "Full Name *",
+  "formEmail": "Email Address *",
+  "formCompany": "Company Name *",
+  "formPhone": "Phone Number",
+  "formIndustry": "Industry *",
+  "formSelectIndustry": "Select industry",
+  "formPaperCups": "Paper Cups",
+  "formFurniture": "Furniture",
+  "formOther": "Other",
+  "formMessage": "Message *",
+  "formSubmit": "Request Demo",
+  "contactTitle": "Get in Touch",
+  "contactEmail": "Email",
+  "contactPhone": "Phone",
+  "contactOffice": "Office",
+  "contactOfficeAddress": "123 Manufacturing Boulevard Industrial Park, IP 12345",
+  "whyTitle": "Why Choose Marsos.sa?",
+  "whyPoint1": "Unified ERP + MRP platform",
+  "whyPoint2": "Local support & compliance"
 }
