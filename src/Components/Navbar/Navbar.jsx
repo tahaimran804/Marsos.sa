@@ -100,20 +100,20 @@ const Navbar = () => {
               <div className='flex items-center gap-1.5 sm:gap-4'>
                 <LanguagesSwitch />
                 <button>
-                  <Link href={"buyer-dashboard"}>
-                    <span className='text-[#000000] max-[380px]:text-sm md:text-lg lg:text-xl'>
+                  <Link href={"/marketplace/buyer-dashboard"}>
+                    <span className='text-[#000000] md:text-lg lg:text-xl'>
                       <MdOutlineDashboard />
                     </span>
                   </Link>
                 </button>
-                <button>
-                  <span className='text-[#000000] max-[380px]:text-sm md:text-lg lg:text-xl'>
+                {/* <button>
+                  <span className='text-[#000000] md:text-lg lg:text-xl'>
                     <GoBell />
                   </span>
-                </button>
+                </button> */}
                 <button>
                   <Link href={"/marketplace/cart"}>
-                    <span className='text-[#000000] flex items-start gap-0.5 max-[380px]:text-sm md:text-lg lg:text-xl'>
+                    <span className='text-[#000000] flex items-start gap-0.5 md:text-lg lg:text-xl'>
                       <IoCartOutline />
                       {totalQuantity > 0 && (
                         <span className='text-xs font-[#2D5016]'>{totalQuantity}</span>
@@ -121,16 +121,16 @@ const Navbar = () => {
                     </span>
                   </Link>
                 </button>
-                <button>
-                  <span className='text-[#000000] max-[380px]:text-sm md:text-lg lg:text-xl'>
+                {/* <button>
+                  <span className='text-[#000000] md:text-lg lg:text-xl'>
                     <FiBox />
                   </span>
-                </button>
-                <button>
-                  <span className='text-[#000000] max-[380px]:text-sm md:text-lg lg:text-xl'>
+                </button> */}
+                {/* <button>
+                  <span className='text-[#000000] md:text-lg lg:text-xl'>
                     <IoPersonOutline />
                   </span>
-                </button>
+                </button> */}
               </div>
             </div>
 

@@ -12,6 +12,7 @@ import Link from 'next/link';
 import { CartContext } from '@/src/Context/CartContext';
 import { IoPrintOutline } from 'react-icons/io5';
 import { useLanguage } from '@/src/Context/LanguageContext';
+import toast from 'react-hot-toast';
 
 const page = ({ params }) => {
   const { t } = useLanguage()
@@ -111,9 +112,6 @@ const page = ({ params }) => {
               </Link>
             </>
           )}
-
-
-
           <ProductActions
             onAddToCart={(qty) => {
               addItems({
@@ -123,7 +121,10 @@ const page = ({ params }) => {
                 price: product.price,
                 quantity: qty,
               });
-              alert("Product added successfully!");
+              toast.success(`${t(product.title)} Added successfully!`, {
+                duration: 2000,
+                icon: "🛒",
+              });
             }}
             onRequestRFQ={() => console.log("Request RFQ clicked")}
           />

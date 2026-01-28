@@ -17,7 +17,7 @@ const RequestDemo = () => {
 
       <section className='mt-10 grid grid-cols-1 lg:grid-cols-2 gap-5'>
         {/* Form */}
-        <div data-aos="zoom-in-left" className='w-full h-auto'>
+        <div data-aos="zoom-in-up" className='w-full h-auto'>
           <form className='flex flex-col gap-4 w-full'>
             <div className='grid grid-cols-2 max-[500px]:grid-cols-1 gap-2'>
               <div className='flex flex-col gap-1'>
@@ -67,7 +67,7 @@ const RequestDemo = () => {
         </div>
 
         {/* Contact & Why Choose */}
-        <div data-aos="zoom-in-right" className='flex flex-col gap-5'>
+        <div data-aos="zoom-in-up" className='flex flex-col gap-5'>
           <div className='py-6 rounded-2xl flex bg-white shadow-2xl flex-col w-full gap-8 px-6'>
             <h1 className='text-2xl font-bold text-black'>{t("contactTitle")}</h1>
             <div className='flex flex-col gap-5'>

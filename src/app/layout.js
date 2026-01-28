@@ -7,6 +7,7 @@ import { LanguageProvider } from '@/src/Context/LanguageContext';
 import { CartProvider } from '@/src/Context/CartContext';
 import DirectionProvider from '@/src/Components/DirectionProvider';
 import AOSProvider from '@/src/Components/AOSProvider';
+import Toast from '@/src/Components/Toast';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
               <ShowNavbarinMarkplace />
               {children}
               <AOSProvider />
+              <Toast />
               <Footer />
             </DirectionProvider>
           </CartProvider>
