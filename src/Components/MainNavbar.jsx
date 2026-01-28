@@ -117,9 +117,11 @@ const MainNavbar = () => {
                 <IoMdClose />
               </button>
 
-              <button className='text-sm rounded-md w-full text-white bg-[#2d5016] px-4 py-2'>
-                {t("demo")}
-              </button>
+              <a href="#demo">
+                <button className='text-sm rounded-md w-full text-white bg-[#2d5016] px-4 py-2'>
+                  {t("demo")}
+                </button>
+              </a>
             </div>
           </div>
         </div>
