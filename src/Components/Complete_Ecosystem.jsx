@@ -1,5 +1,4 @@
 "use client"
-import React from 'react'
 import Container from '@/src/Components/Container'
 import { useLanguage } from '@/src/Context/LanguageContext'
 import {
@@ -55,7 +54,7 @@ const Complete_Ecosystem = () => {
 
   return (
     <Container className='py-16'>
-      <div className='flex w-full flex-col mt-5 items-center'>
+      <div data-aos="fade-up" className='flex w-full flex-col mt-5 items-center'>
         <h1 className='text-xl text-center max-[400px]:text-lg md:text-3xl text-[#2d5016] font-bold'>
           {t("complete_ecosystem_heading")}
         </h1>
@@ -64,7 +63,9 @@ const Complete_Ecosystem = () => {
         </p>
       </div>
 
-      <ul className='w-full grid lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 gap-2 md:gap-5 items-start mt-5'>
+      <div
+        data-aos="fade-up"
+        className='w-full grid lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 gap-2 md:gap-5 items-start mt-5'>
         {BusinessDataSystem.map((item) => (
           <div
             key={item.id}
@@ -79,7 +80,7 @@ const Complete_Ecosystem = () => {
             </div>
           </div>
         ))}
-      </ul>
+      </div>
     </Container>
   )
 }

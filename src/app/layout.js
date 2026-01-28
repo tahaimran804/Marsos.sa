@@ -1,10 +1,12 @@
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import 'aos/dist/aos.css';
 import ShowNavbarinMarkplace from '@/src/Components/ShowNavbarinMarkplace';
 import Footer from '@/src/Components/Footer/Footer';
 import { LanguageProvider } from '@/src/Context/LanguageContext';
 import { CartProvider } from '@/src/Context/CartContext';
 import DirectionProvider from '@/src/Components/DirectionProvider';
+import AOSProvider from '@/src/Components/AOSProvider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -33,6 +35,7 @@ export default function RootLayout({ children }) {
             <DirectionProvider>
               <ShowNavbarinMarkplace />
               {children}
+              <AOSProvider />
               <Footer />
             </DirectionProvider>
           </CartProvider>

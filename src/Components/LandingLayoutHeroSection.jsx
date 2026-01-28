@@ -8,7 +8,7 @@ import Image from 'next/image'
 const LandingLayoutHeroSection = () => {
   const { t } = useLanguage()
   return (
-    <div className='bg-gray-50 w-full h-full'>
+    <div id='home' className='bg-gray-50 w-full h-full'>
       <Container>
         <div className='w-full py-10 items-center h-full grid gird-cols-1 md:grid-cols-2 gap-2 md:gap-15'>
           <div className='w-full flex flex-col gap-5 items-start h-auto'>

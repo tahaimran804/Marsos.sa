@@ -28,8 +28,7 @@ const MainNavbar = () => {
   ]
   return (
     <>
-
-      <header id='home' className='w-full sticky z-50 top-0 border-b border-gray-200 left-0 bg-white h-auto'>
+      <header className='w-full sticky z-50 top-0 border-b border-gray-200 left-0 bg-white h-auto'>
         <Container className='py-2'>
           <div className='flex flex-col gap-2 items-start'>
             <div className='flex py-4 items-center lg:items-start xl:items-center justify-between gap-1 w-full'>

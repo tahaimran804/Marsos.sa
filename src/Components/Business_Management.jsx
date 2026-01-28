@@ -98,7 +98,7 @@ const Business_Management = () => {
             </div>
           </div>
 
-          <div className='w-full relative my-10 h-60 sm:h-88 rounded-2xl shadow-xl'>
+          <div data-aos="zoom-in-up" className='w-full relative my-10 h-60 sm:h-88 rounded-2xl shadow-xl'>
             <Image src="/business.jpg" alt='hero-image' fill className='w-full rounded-2xl h-32' />
 
             <div className='px-2 py-3 h-auto flex items-center justify-start gap-4 bg-white absolute shadow-lg bottom-2 left-2 border border-gray-200 rounded-md'>

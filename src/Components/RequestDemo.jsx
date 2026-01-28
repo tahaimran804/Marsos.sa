@@ -3,21 +3,21 @@ import React from 'react'
 import Container from '@/src/Components/Container'
 import { useLanguage } from '@/src/Context/LanguageContext'
 import { CiPaperplane } from 'react-icons/ci'
-import { MdOutlineMailOutline } from "react-icons/md"
+import { MdOutlineMailOutline, MdOutlineCall, MdOutlineLocationOn } from "react-icons/md"
 
 const RequestDemo = () => {
   const { t } = useLanguage()
 
   return (
-    <Container id="demo" className='py-16'>
-      <div className='w-full flex flex-col gap-2 items-center text-center'>
+    <Container className='py-16'>
+      <div id="demo" data-aos="fade-up" className='w-full flex flex-col gap-2 items-center text-center'>
         <h1 className='text-xl md:text-3xl font-bold'>{t("requestDemoTitle")}</h1>
         <p className='text-sm text-gray-500'>{t("requestDemoSubtitle")}</p>
       </div>
 
       <section className='mt-10 grid grid-cols-1 lg:grid-cols-2 gap-5'>
         {/* Form */}
-        <div className='w-full h-auto'>
+        <div data-aos="zoom-in-left" className='w-full h-auto'>
           <form className='flex flex-col gap-4 w-full'>
             <div className='grid grid-cols-2 max-[500px]:grid-cols-1 gap-2'>
               <div className='flex flex-col gap-1'>
@@ -67,31 +67,31 @@ const RequestDemo = () => {
         </div>
 
         {/* Contact & Why Choose */}
-        <div className='flex flex-col gap-5'>
+        <div data-aos="zoom-in-right" className='flex flex-col gap-5'>
           <div className='py-6 rounded-2xl flex bg-white shadow-2xl flex-col w-full gap-8 px-6'>
             <h1 className='text-2xl font-bold text-black'>{t("contactTitle")}</h1>
             <div className='flex flex-col gap-5'>
               <div className='flex items-start gap-2'>
                 <span className='p-4 text-2xl rounded-sm text-[#2d5016] bg-gray-200'><MdOutlineMailOutline /></span>
                 <div className='flex flex-col gap-1'>
-                  <h1 className='text-xl font-bold'>{t("contactEmail")}</h1>
-                  <a href='mailto:marsos@marsos.sa' className='text-lg text-gray-500'>marsos@marsos.sa</a>
+                  <h1 className='text-sm sm:text-lg font-bold'>{t("contactEmail")}</h1>
+                  <a href='mailto:marsos@marsos.sa' className='text-sm text-gray-500'>marsos@marsos.sa</a>
                 </div>
               </div>
 
               <div className='flex items-start gap-2'>
-                <span className='p-4 text-2xl rounded-sm text-[#2d5016] bg-gray-200'><MdOutlineMailOutline /></span>
+                <span className='p-4 text-2xl rounded-sm text-[#2d5016] bg-gray-200'><MdOutlineCall /></span>
                 <div className='flex flex-col gap-1'>
-                  <h1 className='text-xl font-bold'>{t("contactPhone")}</h1>
-                  <a href='tel:+966553977153' className='text-lg text-gray-500'>+966553977153</a>
+                  <h1 className='text-sm sm:text-lg font-bold'>{t("contactPhone")}</h1>
+                  <a href='tel:+966553977153' className='text-sm text-gray-500'>+966553977153</a>
                 </div>
               </div>
 
               <div className='flex items-start gap-2'>
-                <span className='p-4 text-2xl rounded-sm text-[#2d5016] bg-gray-200'><MdOutlineMailOutline /></span>
+                <span className='p-4 text-2xl rounded-sm text-[#2d5016] bg-gray-200'><MdOutlineLocationOn /></span>
                 <div className='flex flex-col gap-1'>
-                  <h1 className='text-xl font-bold'>{t("contactOffice")}</h1>
-                  <a href='#' className='text-lg text-gray-500'>{t("contactOfficeAddress")}</a>
+                  <h1 className='text-sm sm:text-lg font-bold'>{t("contactOffice")}</h1>
+                  <a href='#' className='text-sm text-gray-500'>{t("contactOfficeAddress")}</a>
                 </div>
               </div>
             </div>
