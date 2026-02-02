@@ -66,7 +66,7 @@ const MainNavbar = () => {
                     <LanguagesSwitch />
                     <button onClick={() => setOpenNavbar(true)} className='text-xl text-black flex lg:hidden'><FiMenu /></button>
                     <a href="#demo">
-                      <button className='text-sm lg:flex hidden text-white bg-[#2d5016] px-4 py-2'>{t("demo")}</button>
+                      <button className='text-sm lg:flex cursor-pointer hidden text-white bg-[#2d5016] px-4 py-2'>{t("demo")}</button>
                     </a>
                   </div>
                 </div>
@@ -104,21 +104,21 @@ const MainNavbar = () => {
 
           <div className='flex items-center w-full flex-col gap-3'>
             <div className='flex items-center w-full flex-col gap-2'>
-              <Link href={"/marketplace"} className='w-full'>
-                <button className='text-sm justify-center w-full rounded-md text-[#2d5016] border border-gray-200 bg-gray-200 px-6 py-2 flex items-center gap-1'>
+              <Link href={"/marketplace"} className='w-full '>
+                <button className='text-sm justify-center w-full cursor-pointer rounded-md text-[#2d5016] border border-gray-200 bg-gray-200 px-6 py-2 flex items-center gap-1'>
                   <span><IoCartOutline /></span> {t("market")}
                 </button>
               </Link>
 
               <button
                 onClick={() => setOpenNavbar(false)}
-                className='text-xl text-black absolute top-2 right-2 flex lg:hidden'
+                className='text-xl text-black cursor-pointer absolute top-2 right-2 flex lg:hidden'
               >
                 <IoMdClose />
               </button>
 
-              <a href="#demo" className='w-full'>
-                <button onClick={() => setOpenNavbar(false)} className='text-sm rounded-md w-full text-white bg-[#2d5016] px-4 py-2'>
+              <a href="#demo" className='w-full '>
+                <button onClick={() => setOpenNavbar(false)} className='text-sm cursor-pointer rounded-md w-full text-white bg-[#2d5016] px-4 py-2'>
                   {t("demo")}
                 </button>
               </a>

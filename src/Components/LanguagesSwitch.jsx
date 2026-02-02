@@ -29,7 +29,7 @@ const LanguagesSwitch = () => {
     <div className="relative mt-2" ref={dropdownRef}>
       <button
         onClick={() => setOpen(!open)}
-        className="text-black max-[380px]:text-sm md:text-lg lg:text-xl"
+        className="text-black cursor-pointer max-[380px]:text-sm md:text-lg lg:text-xl"
       >
         <GrLanguage />
       </button>
@@ -38,7 +38,7 @@ const LanguagesSwitch = () => {
         <div className="absolute right-0 mt-2 w-36 sm:w-52 shadow-md bg-white border border-gray-200 rounded-md  p-2 flex flex-col gap-2 z-50">
           <button
             onClick={() => changeLang("en")}
-            className={`text-left hover:bg-gray-100 px-2 py-1 rounded
+            className={`text-left cursor-pointer hover:bg-gray-100 px-2 py-1 rounded
             ${lang === "en" ? "bg-gray-200" : ""}
             `}
           >
@@ -47,7 +47,7 @@ const LanguagesSwitch = () => {
 
           <button
             onClick={() => changeLang("ur")}
-            className={`text-left hover:bg-gray-100 px-2 py-1 rounded
+            className={`text-left cursor-pointer hover:bg-gray-100 px-2 py-1 rounded
             ${lang === "ur" ? "bg-gray-200" : ""}
             `}
           >
@@ -56,7 +56,7 @@ const LanguagesSwitch = () => {
 
           <button
             onClick={() => changeLang("ar")}
-            className={`text-left hover:bg-gray-100 px-2 py-1 rounded
+            className={`text-left cursor-pointer hover:bg-gray-100 px-2 py-1 rounded
             ${lang === "ar" ? "bg-gray-200" : ""}
             `}
           >

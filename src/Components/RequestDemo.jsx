@@ -98,10 +98,10 @@ const RequestDemo = () => {
           </div>
 
           <div className='py-6 rounded-2xl w-full flex bg-[#2d5016] flex-col gap-3 px-6'>
-            <h1 className='text-2xl font-bold text-white'>{t("whyTitle")}</h1>
+            <h1 className='text-xl font-bold text-white'>{t("whyTitle")}</h1>
             <ul className='flex flex-col px-6 gap-1'>
-              <li className='text-lg list-disc text-gray-100'>{t("whyPoint1")}</li>
-              <li className='text-lg list-disc text-gray-100'>{t("whyPoint2")}</li>
+              <li className='text-sm list-disc text-gray-100'>{t("whyPoint1")}</li>
+              <li className='text-sm list-disc text-gray-100'>{t("whyPoint2")}</li>
             </ul>
           </div>
         </div>
